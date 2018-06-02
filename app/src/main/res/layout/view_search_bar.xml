@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2018
+  ~
+  ~ Source code is created by Elissa Software
+  ~ Dictionary data is owned by UCST
+  ~ Database is implemented by Salai Chit Oo Latt
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/shape_search_background">
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="0dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_search"
+            tools:ignore="VectorDrawableCompat" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/btnSearch"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/search_bookmarks_hint"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            tools:ignore="RtlHardcoded" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/btnOptions"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="0dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_option"
+            tools:ignore="VectorDrawableCompat" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/btnClear"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="0dp"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_clear"
+            tools:ignore="VectorDrawableCompat" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

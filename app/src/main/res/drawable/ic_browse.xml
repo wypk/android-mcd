@@ -1,0 +1,35 @@
+<!--
+  ~ Copyright (C) 2018
+  ~
+  ~ Source code is created by Elissa Software
+  ~ Dictionary data is owned by UCST
+  ~ Database is implemented by Salai Chit Oo Latt
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="512dp"
+    android:height="512dp"
+    android:viewportHeight="512"
+    android:viewportWidth="512">
+    <path
+        android:fillColor="#263238"
+        android:pathData="M504.954,153.285l-241,-151c-4.863,-3.047 -11.045,-3.047 -15.908,0l-241,151C2.666,156.024 0,160.829 0,166s2.666,9.976 7.046,12.715l241,150c2.432,1.523 5.2,2.285 7.954,2.285c2.754,0 5.522,-0.762 7.954,-2.285l241,-150c4.38,-2.739 7.046,-7.544 7.046,-12.715C512,160.829 509.334,156.024 504.954,153.285z" />
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M504.954,243.285l-23.357,-14.599l-201.75,125.473C272.714,358.627 264.452,361 256,361c-8.452,0 -16.714,-2.373 -23.877,-6.855L30.399,228.69L7.046,243.285C2.666,246.024 0,250.829 0,256s2.666,9.976 7.046,12.715l241,150c2.432,1.523 5.2,2.285 7.954,2.285c2.754,0 5.522,-0.762 7.954,-2.285l241,-150c4.38,-2.739 7.046,-7.544 7.046,-12.715C512,250.829 509.334,246.024 504.954,243.285z" />
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M504.954,333.285l-23.357,-14.599l-201.75,125.473C272.714,448.627 264.452,451 256,451c-8.452,0 -16.714,-2.373 -23.877,-6.855L30.399,318.69L7.046,333.285C2.666,336.024 0,340.829 0,346c0,5.171 2.666,9.976 7.046,12.715l241,151c2.432,1.523 5.2,2.285 7.954,2.285c2.754,0 5.522,-0.762 7.954,-2.285l241,-151c4.38,-2.739 7.046,-7.544 7.046,-12.715C512,340.829 509.334,336.024 504.954,333.285z" />
+</vector>
