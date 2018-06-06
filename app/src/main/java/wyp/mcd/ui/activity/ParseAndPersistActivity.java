@@ -52,16 +52,6 @@ public class ParseAndPersistActivity extends BasicActivity {
     LottieAnimationView mLottieAnimationView;
 
     @Override
-    public void onInternetAvailable() {
-
-    }
-
-    @Override
-    public void onInternetUnavailable() {
-
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 

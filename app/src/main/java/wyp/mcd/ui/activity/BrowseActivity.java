@@ -55,16 +55,6 @@ public class BrowseActivity extends BasicActivity {
     AppCompatImageButton toggleBtnDictionaryType;
 
     @Override
-    public void onInternetAvailable() {
-
-    }
-
-    @Override
-    public void onInternetUnavailable() {
-
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 

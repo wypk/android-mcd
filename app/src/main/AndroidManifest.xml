@@ -32,10 +32,10 @@
         android:configChanges="orientation"
         android:fullBackupContent="@xml/backup_descriptor"
         android:hardwareAccelerated="false"
-        android:icon="@drawable/ic_launcher_round"
+        android:icon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@drawable/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">

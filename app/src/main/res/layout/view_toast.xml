@@ -33,5 +33,5 @@
         android:gravity="center"
         android:text="@string/app_name"
         android:textColor="@color/white"
-        android:textSize="14sp" />
+        android:textSize="@dimen/text_size_regular" />
 </android.support.v7.widget.LinearLayoutCompat>

@@ -18,44 +18,38 @@
   ~ limitations under the License.
   -->
 
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:drawable/screen_background_light_transparent"
+    android:fitsSystemWindows="true"
+    tools:mContext=".fragment_search">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <include
+        android:id="@+id/rlSearchBar"
+        layout="@layout/view_search_bar" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:drawable/screen_background_light_transparent"
-        android:fitsSystemWindows="true"
-        tools:ignore="UselessParent"
-        tools:mContext=".fragment_search">
+        android:layout_below="@id/rlSearchBar"
+        android:layout_centerVertical="true"
+        android:background="@color/grey_100">
 
-        <include
-            android:id="@+id/rlSearchBar"
-            layout="@layout/view_search_bar" />
-
-        <RelativeLayout
+        <com.l4digital.fastscroll.FastScrollRecyclerView
+            android:id="@+id/recyclerViewSearch"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/rlSearchBar"
-            android:layout_centerVertical="true"
-            android:background="@color/grey_100">
+            android:clipToPadding="false"
+            app:bubbleColor="@color/colorPrimaryDark"
+            app:bubbleTextColor="@color/white"
+            app:handleColor="#999999"
+            app:hideScrollbar="true"
+            app:showTrack="false"
+            app:trackColor="#bbbbbb" />
 
-            <com.l4digital.fastscroll.FastScrollRecyclerView
-                android:id="@+id/recyclerViewSearch"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false"
-                app:bubbleColor="@color/colorPrimaryDark"
-                app:bubbleTextColor="@color/white"
-                app:handleColor="#999999"
-                app:hideScrollbar="true"
-                app:showTrack="false"
-                app:trackColor="#bbbbbb" />
-
-        </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

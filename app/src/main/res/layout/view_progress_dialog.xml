@@ -28,8 +28,8 @@
     <com.wang.avi.AVLoadingIndicatorView
         android:id="@+id/progress_bar"
         style="@style/AVLoadingIndicatorView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:visibility="visible"
         app:indicatorColor="@android:color/black"
         app:indicatorName="BallClipRotatePulseIndicator" />

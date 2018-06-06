@@ -63,10 +63,12 @@ public abstract class BasicActivity extends AppCompatActivity implements Network
     }
 
     @Override
-    public abstract void onInternetAvailable();
+    public void onInternetAvailable() {
+    }
 
     @Override
-    public abstract void onInternetUnavailable();
+    public void onInternetUnavailable() {
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

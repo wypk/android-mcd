@@ -28,7 +28,6 @@
         android:id="@+id/rlTitleBar"
         layout="@layout/view_screen_title_bar_primary" />
 
-
     <ScrollView
         android:id="@+id/svBody"
         android:layout_width="match_parent"
@@ -63,9 +62,10 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_round" />
+                    android:src="@mipmap/ic_launcher_round" />
 
                 <RelativeLayout
+                    android:id="@+id/rlAppInfoGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -78,17 +78,17 @@
                         android:layout_height="wrap_content"
                         android:text="@string/app_name"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/text_size_medium" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        fontPath="fonts/Gordita-Medium.otf"
+                        fontPath="fonts/Gordita-Regular.otf"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/lblAppName"
                         android:gravity="center"
                         android:text="@string/version"
                         android:textColor="@color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/text_size_regular" />
                 </RelativeLayout>
             </RelativeLayout>
 
@@ -133,7 +133,7 @@
                         android:layout_toEndOf="@id/imvBrowse"
                         android:text="@string/title_browse"
                         android:textColor="@color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/text_size_regular" />
 
                 </RelativeLayout>
 
@@ -180,7 +180,7 @@
                         android:layout_toEndOf="@+id/imvGithub"
                         android:text="@string/github"
                         android:textColor="@color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/text_size_regular" />
 
                 </RelativeLayout>
 
@@ -227,7 +227,7 @@
                         android:layout_toEndOf="@+id/imvLicense"
                         android:text="@string/libraries"
                         android:textColor="@color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/text_size_regular" />
 
                 </RelativeLayout>
 
@@ -274,7 +274,7 @@
                         android:layout_toEndOf="@+id/imvBugs"
                         android:text="@string/report_bugs"
                         android:textColor="@color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/text_size_regular" />
 
                 </RelativeLayout>
 

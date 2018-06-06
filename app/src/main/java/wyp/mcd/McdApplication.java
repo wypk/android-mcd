@@ -37,6 +37,9 @@ public class McdApplication extends Application {
     private static McdApplication instance;
 
     public static synchronized McdApplication getInstance() {
+        if (null == instance) {
+            instance = new McdApplication();
+        }
         return instance;
     }
 

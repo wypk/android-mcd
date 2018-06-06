@@ -53,7 +53,7 @@ import wyp.mcd.viewmodel.BookmarksViewModel;
 @NoArgsConstructor
 public class BookmarksFragment extends BasicFragment implements View.OnLongClickListener, View.OnClickListener {
 
-    @BindView(R.id.rlSad)
+    @BindView(R.id.rlNoBookmark)
     RelativeLayout rlSad;
 
     @BindView(R.id.lblScreenTitle)

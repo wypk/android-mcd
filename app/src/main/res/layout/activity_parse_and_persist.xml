@@ -40,5 +40,7 @@
         android:layout_below="@+id/lottie_animation_view"
         android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
-        android:text="@string/txt_info" />
+        android:text="@string/txt_info"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size_regular" />
 </RelativeLayout>

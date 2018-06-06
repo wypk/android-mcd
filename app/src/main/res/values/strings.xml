@@ -48,7 +48,7 @@
     <string name="confirm_delete_dialog_positive_button">Yes</string>
     <string name="confirm_delete_dialog_negative_button">Cancel</string>
 
-    <string name="version">Version 1.0.1</string>
+    <string name="version">Version 1.0.2</string>
     <string name="github">Github</string>
     <string name="libraries">Libraries</string>
     <string name="report_bugs">Report Bugs</string>
