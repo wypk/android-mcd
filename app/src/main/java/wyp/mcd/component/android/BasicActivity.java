@@ -131,7 +131,7 @@ public abstract class BasicActivity extends AppCompatActivity implements Network
 
     protected abstract int getLayoutFileId();
 
-    public abstract int getRootLayoutId();
+    protected abstract int getRootLayoutId();
 
     protected abstract String getScreenTitleAtStart();
 

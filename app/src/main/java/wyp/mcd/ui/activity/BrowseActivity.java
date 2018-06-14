@@ -41,18 +41,17 @@ import wyp.mcd.viewmodel.BrowseListViewModel;
 
 public class BrowseActivity extends BasicActivity {
 
-    private DictionaryType dictionaryType;
-    private boolean dictionaryTypeWatcher;
-
-    private SearchMmListAdapter searchMmListAdapter;
-    private SearchEngListAdapter searchEngListAdapter;
-    private BrowseListViewModel browseListViewModel;
-
     @BindView(R.id.recyclerViewBrowse)
     FastScrollRecyclerView recyclerViewBrowse;
 
     @BindView(R.id.toggleImageBtn)
     AppCompatImageButton toggleBtnDictionaryType;
+
+    private DictionaryType dictionaryType;
+    private boolean dictionaryTypeWatcher;
+    private SearchMmListAdapter searchMmListAdapter;
+    private SearchEngListAdapter searchEngListAdapter;
+    private BrowseListViewModel browseListViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

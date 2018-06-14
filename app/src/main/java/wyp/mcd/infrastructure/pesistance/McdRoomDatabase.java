@@ -40,10 +40,6 @@ import wyp.mcd.infrastructure.entities.EngToMmEntity;
 @TypeConverters({DateRoomConverter.class})
 public abstract class McdRoomDatabase extends RoomDatabase {
 
-    public abstract BookmarksDao bookmarksDao();
-    public abstract EngToMmDao engToMmDao();
-    public abstract EngToEngDao engToEngDao();
-
     private static McdRoomDatabase INSTANCE;
 
     public static McdRoomDatabase getDatabase(final Context mContext) {
@@ -67,6 +63,12 @@ public abstract class McdRoomDatabase extends RoomDatabase {
                 .fallbackToDestructiveMigration()
                 .build();
     }
+
+    public abstract BookmarksDao bookmarksDao();
+
+    public abstract EngToMmDao engToMmDao();
+
+    public abstract EngToEngDao engToEngDao();
 
     public void cleanUp() {
         INSTANCE = null;

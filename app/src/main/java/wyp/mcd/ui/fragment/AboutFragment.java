@@ -88,7 +88,7 @@ public class AboutFragment extends BasicFragment {
 
     @OnClick(R.id.rlGithub)
     public void goGithub() {
-        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/WYPhyoe/mcd-android"));
+        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/wyphyoe/mcd-android"));
         startActivity(webIntent);
     }
 
@@ -139,7 +139,7 @@ public class AboutFragment extends BasicFragment {
 
     @OnClick(R.id.rlReportBugs)
     public void reportBugs() {
-        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/WYPhyoe/mcd-android/issues"));
+        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/wyphyoe/mcd-android/issues"));
         startActivity(webIntent);
     }
 }

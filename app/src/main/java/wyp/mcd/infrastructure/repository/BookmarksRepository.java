@@ -45,7 +45,6 @@ public class BookmarksRepository {
         return itemBookmarksList;
     }
 
-
     public void deleteBookmark(BookmarksEntity bookmarksEntity) {
         bookmarksDao.deleteBookmark(bookmarksEntity);
     }

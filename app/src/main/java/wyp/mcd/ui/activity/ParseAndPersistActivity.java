@@ -44,12 +44,11 @@ import wyp.mcd.infrastructure.pesistance.McdRoomDatabase;
 @SuppressWarnings("unchecked")
 public class ParseAndPersistActivity extends BasicActivity {
 
+    @BindView(R.id.lottie_animation_view)
+    LottieAnimationView mLottieAnimationView;
     private EngToMmDao engToMmDao;
     private EngToEngDao engToEngDao;
     private JsonParser jsonParser;
-
-    @BindView(R.id.lottie_animation_view)
-    LottieAnimationView mLottieAnimationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +73,7 @@ public class ParseAndPersistActivity extends BasicActivity {
     }
 
     @Override
-    public int getRootLayoutId() {
+    protected int getRootLayoutId() {
         return R.layout.activity_parse_and_persist;
     }
 
@@ -97,6 +96,14 @@ public class ParseAndPersistActivity extends BasicActivity {
 
         if (!AppInfoStorage.getInstance().isDbPersisted()) {
             new InsertEngToMmAsyncTask(engToMmDao).execute((List<EngToMmEntity>) jsonParser.parseEngToMmJson());
+        }
+    }
+
+    private void showNextScreen() {
+        if (AppInfoStorage.getInstance().isDbPersisted()) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 
@@ -150,14 +157,6 @@ public class ParseAndPersistActivity extends BasicActivity {
             /* Marked db is already persisted*/
             AppInfoStorage.getInstance().dbPersisted();
             showNextScreen();
-        }
-    }
-
-    private void showNextScreen() {
-        if (AppInfoStorage.getInstance().isDbPersisted()) {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            finish();
         }
     }
 }

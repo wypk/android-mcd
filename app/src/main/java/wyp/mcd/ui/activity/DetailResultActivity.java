@@ -54,15 +54,7 @@ import wyp.mcd.viewmodel.BookmarksViewModel;
 @SuppressWarnings("deprecation")
 public class DetailResultActivity extends BasicActivity implements TextToSpeech.OnInitListener, PopupMenu.PopupMenuListener {
 
-    private boolean internetAvailableWatcher;
     private static final String APP_LINK = "\nhttps://wyphyoe.github.io/mcd/";
-    private String vocabulary;
-    private String type;
-    private String meaning;
-    private boolean bookmarksWatcher;
-    private TextToSpeech textToSpeech;
-    private PopupMenu popupMenu = null;
-    private BookmarksViewModel bookmarksViewModel;
 
     @BindView(R.id.btnPronunciation)
     AppCompatImageButton btnPronunciation;
@@ -87,6 +79,15 @@ public class DetailResultActivity extends BasicActivity implements TextToSpeech.
 
     @BindView(R.id.lblMeaning)
     ExpandableTextView lblMeaning;
+
+    private boolean internetAvailableWatcher;
+    private String vocabulary;
+    private String type;
+    private String meaning;
+    private boolean bookmarksWatcher;
+    private TextToSpeech textToSpeech;
+    private PopupMenu popupMenu = null;
+    private BookmarksViewModel bookmarksViewModel;
 
     @Override
     public void onInternetAvailable() {

@@ -37,7 +37,7 @@ import wyp.mcd.R;
 import wyp.mcd.infrastructure.entities.EngToEngEntity;
 import wyp.mcd.ui.activity.DetailResultActivity;
 
-public class SearchEngListAdapter extends RecyclerView.Adapter<SearchEngListAdapter.ViewHolder> implements FastScroller.SectionIndexer{
+public class SearchEngListAdapter extends RecyclerView.Adapter<SearchEngListAdapter.ViewHolder> implements FastScroller.SectionIndexer {
 
     private List<EngToEngEntity> dataSet;
     private Context context;

@@ -40,7 +40,7 @@ android {
 
     signingConfigs {
         release {
-            keyAlias 'mcd-android'
+            keyAlias 'mcd-key'
             keyPassword 'password'
             storeFile file('/Users/elissa/Downloads/Bitbucket/android-projects/mm_computer_dictionary_anroid/android_keystore.jks')
             storePassword 'password'
@@ -52,8 +52,8 @@ android {
         applicationId "wyp.mmcomputerdictionary"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.0.1"
+        versionCode 4
+        versionName "1.0.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

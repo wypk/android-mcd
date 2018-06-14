@@ -39,15 +39,13 @@ public class JsonParser {
 
     private final static String JSON_FILE_ENG_TO_MM = "data/eng_to_mm.json";
     private final static String JSON_FILE_ENG_TO_ENG = "data/eng_to_eng.json";
+    private static Type engToMmList = new TypeToken<List<EngToMmEntity>>() {
+    }.getType();
+    private static Type engToEngList = new TypeToken<List<EngToEngEntity>>() {
+    }.getType();
     private Context mContext;
     private List<EngToMmEntity> engToMmEntitiesList = new ArrayList<>();
     private List<EngToEngEntity> engToEngEntitiesList = new ArrayList<>();
-
-    private static Type engToMmList = new TypeToken<List<EngToMmEntity>>() {
-    }.getType();
-
-    private static Type engToEngList = new TypeToken<List<EngToEngEntity>>() {
-    }.getType();
 
     public JsonParser(Context mContext) {
         super();
