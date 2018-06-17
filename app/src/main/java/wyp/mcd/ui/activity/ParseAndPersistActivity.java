@@ -31,9 +31,11 @@ import java.util.List;
 
 import butterknife.BindView;
 import wyp.mcd.R;
+import wyp.mcd.component.android.AndroidUtil;
 import wyp.mcd.component.android.BasicActivity;
 import wyp.mcd.component.jsonparse.JsonParser;
-import wyp.mcd.component.sharepreferences.AppInfoStorage;
+import wyp.mcd.component.sharedpreferences.AppInfoStorage;
+import wyp.mcd.component.util.ClearApplicationData;
 import wyp.mcd.component.util.Logger;
 import wyp.mcd.infrastructure.dao.EngToEngDao;
 import wyp.mcd.infrastructure.dao.EngToMmDao;
@@ -94,13 +96,18 @@ public class ParseAndPersistActivity extends BasicActivity {
 
     private void parseAndPersistData() {
 
-        if (!AppInfoStorage.getInstance().isDbPersisted()) {
+        if (AppInfoStorage.getInstance().getVersionCode() != AndroidUtil.getCurrentVersionCode(ParseAndPersistActivity.this)) {
+
+            /* Clean Current database and SharedPreferences */
+            ClearApplicationData.clearApplicationData(ParseAndPersistActivity.this);
+            AppInfoStorage.getInstance().cleanUpAll();
+
             new InsertEngToMmAsyncTask(engToMmDao).execute((List<EngToMmEntity>) jsonParser.parseEngToMmJson());
         }
     }
 
     private void showNextScreen() {
-        if (AppInfoStorage.getInstance().isDbPersisted()) {
+        if (AppInfoStorage.getInstance().getVersionCode() == AndroidUtil.getCurrentVersionCode(ParseAndPersistActivity.this)) {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
@@ -154,8 +161,9 @@ public class ParseAndPersistActivity extends BasicActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            /* Marked db is already persisted*/
-            AppInfoStorage.getInstance().dbPersisted();
+            /* Marked version code for next data upgrade &
+             db is already persisted*/
+            AppInfoStorage.getInstance().saveVersionCode(AndroidUtil.getCurrentVersionCode(ParseAndPersistActivity.this));
             showNextScreen();
         }
     }

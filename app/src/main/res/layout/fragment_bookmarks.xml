@@ -65,7 +65,6 @@
             tools:ignore="VectorDrawableCompat" />
 
         <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/lblNoBookMark"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

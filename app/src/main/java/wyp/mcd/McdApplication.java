@@ -21,6 +21,7 @@
 package wyp.mcd;
 
 import android.app.Application;
+import android.os.Build;
 import android.support.v7.app.AppCompatDelegate;
 
 import com.crashlytics.android.Crashlytics;
@@ -29,7 +30,8 @@ import com.crashlytics.android.answers.Answers;
 import io.fabric.sdk.android.Fabric;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import wyp.mcd.component.android.AppLifecycle;
-import wyp.mcd.component.sharepreferences.AppInfoStorage;
+import wyp.mcd.component.android.McdNotificationManager;
+import wyp.mcd.component.sharedpreferences.AppInfoStorage;
 import wyp.mcd.component.util.Logger;
 
 public class McdApplication extends Application {
@@ -69,5 +71,13 @@ public class McdApplication extends Application {
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         );
+
+        /* Setup notification for app */
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            Logger.d(this.getClass(), "Registering notification channel...");
+            McdNotificationManager.createNotificationChannel(
+                    this, McdNotificationManager.CHAT_CHANNEL_ID, "Notify Incoming",
+                    "Application will notify whenever there is incoming message");
+        }
     }
 }

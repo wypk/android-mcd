@@ -65,7 +65,6 @@
                     android:src="@mipmap/ic_launcher_round" />
 
                 <RelativeLayout
-                    android:id="@+id/rlAppInfoGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"

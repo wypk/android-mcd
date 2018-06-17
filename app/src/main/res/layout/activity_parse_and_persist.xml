@@ -41,6 +41,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
         android:text="@string/txt_info"
+        android:lineSpacingExtra="4sp"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="@dimen/text_size_regular" />
 </RelativeLayout>

@@ -305,7 +305,7 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
 
     private void init(Context context, AttributeSet attrs) {
 
-        LayoutInflater.from(context).inflate(R.layout.view_expandabletextview, this, true);
+        LayoutInflater.from(context).inflate(R.layout.view_expandable_text_view, this, true);
         // enforces vertical orientation
         setOrientation(LinearLayout.VERTICAL);
 

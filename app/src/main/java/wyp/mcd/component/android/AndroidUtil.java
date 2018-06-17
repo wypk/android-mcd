@@ -22,13 +22,16 @@ package wyp.mcd.component.android;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.ConnectivityManager;
 import android.net.Uri;
 
 import wyp.mcd.R;
-import wyp.mcd.component.sharepreferences.AppInfoStorage;
+import wyp.mcd.component.sharedpreferences.AppInfoStorage;
+import wyp.mcd.component.util.Logger;
 
 public class AndroidUtil {
 
@@ -67,5 +70,23 @@ public class AndroidUtil {
         intent.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
         context.getApplicationContext().sendBroadcast(intent);
         AppInfoStorage.getInstance().shortcutCreated();
+    }
+
+    /* To get version number from package info */
+    public static int getCurrentVersionCode(Context context) {
+
+        PackageInfo packageInfo = null;
+        try {
+            packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        assert packageInfo != null;
+        int versionNumber = packageInfo.versionCode;
+        String versionName = packageInfo.versionName;
+        Logger.log("Current version code is :" + versionNumber);
+        Logger.log("Current version name is :" + versionName);
+
+        return versionNumber;
     }
 }

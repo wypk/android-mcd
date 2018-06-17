@@ -53,6 +53,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.MainActivity"
+            android:parentActivityName=".ui.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateVisible|adjustPan" />
         <activity android:name=".ui.activity.DetailResultActivity" />

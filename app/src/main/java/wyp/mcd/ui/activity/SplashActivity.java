@@ -27,7 +27,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import wyp.mcd.R;
 import wyp.mcd.component.android.AndroidUtil;
-import wyp.mcd.component.sharepreferences.AppInfoStorage;
+import wyp.mcd.component.sharedpreferences.AppInfoStorage;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -51,7 +51,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void showNextScreen() {
-        if (AppInfoStorage.getInstance().isDbPersisted()) {
+        if (AppInfoStorage.getInstance().getVersionCode() == AndroidUtil.getCurrentVersionCode(this)) {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();

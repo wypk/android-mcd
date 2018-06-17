@@ -18,7 +18,7 @@
  * limitations under the License.
  */
 
-package wyp.mcd.component.sharepreferences;
+package wyp.mcd.component.sharedpreferences;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -31,7 +31,7 @@ public class AppInfoStorage {
 
     private final static String PREFERENCES_NAME = "org.mcd.AppInfoStorage";
     private final static String KEY_SHORTCUT = "org.mcd.AppInfoStorage.KEY_SHORTCUT";
-    private final static String KEY_DB_PERSIST = "org.mcd.AppInfoStorage.KEY_DB_PERSIST";
+    private final static String KEY_VERSION_CODE = "org.mcd.AppInfoStorage.KEY_DB_PERSIST";
 
     private static AppInfoStorage appInfoStorage = null;
 
@@ -67,18 +67,21 @@ public class AppInfoStorage {
         this.editor.commit();
     }
 
-    public boolean isDbPersisted() {
-        return this.sharedPreferences.getBoolean(KEY_DB_PERSIST, false);
+    /* Save the version code. Why?
+       To know  dictionary data is already persist or not.
+       To know version for upgrade data */
+    public void saveVersionCode(int versionCode) {
+        this.editor.putInt(KEY_VERSION_CODE, versionCode);
+        this.editor.commit();
     }
 
-    public void dbPersisted() {
-        this.editor.putBoolean(KEY_DB_PERSIST, true);
-        this.editor.commit();
+    public int getVersionCode() {
+        return this.sharedPreferences.getInt(KEY_VERSION_CODE, -1);
     }
 
     public void cleanUpAll() {
         this.editor.remove(KEY_SHORTCUT);
-        this.editor.remove(KEY_DB_PERSIST);
+        this.editor.remove(KEY_VERSION_CODE);
         this.editor.commit();
         Logger.d(this.getClass(), "AppInfoStorage.cleanUpAll DONE");
     }
