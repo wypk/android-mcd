@@ -72,7 +72,6 @@ public class BookmarksFragment extends BasicFragment implements View.OnLongClick
     private BookmarksViewModel bookmarksViewModel;
 
     private String vocabulary;
-    private String type;
     private String meaning;
 
     @Override
@@ -151,18 +150,15 @@ public class BookmarksFragment extends BasicFragment implements View.OnLongClick
 
         if (engToMmEntity != null) {
             vocabulary = engToMmEntity.getVocabulary();
-            type = "( " + engToMmEntity.getType() + " )";
             meaning = engToMmEntity.getMeaning();
         }
         if (engToEngEntity != null) {
             vocabulary = engToEngEntity.getVocabulary();
-            type = "";
             meaning = engToEngEntity.getMeaning();
         }
 
         Intent intent = new Intent(getContext(), DetailResultActivity.class);
         intent.putExtra("vocabularyKey", vocabulary);
-        intent.putExtra("typeKey", type);
         intent.putExtra("meaningKey", meaning);
         startActivity(intent);
     }

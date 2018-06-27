@@ -19,7 +19,6 @@
  */
 package wyp.mcd.component.android;
 
-import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -29,7 +28,6 @@ import android.support.v7.widget.AppCompatTextView;
 import android.view.WindowManager;
 
 import butterknife.ButterKnife;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 import wyp.mcd.R;
 import wyp.mcd.component.network.NetworkStatusBroadcastReceiver;
 import wyp.mcd.component.util.TransitionUtil;
@@ -118,15 +116,6 @@ public abstract class BasicActivity extends AppCompatActivity implements Network
 
         super.onResume();
         this.networkStatusBroadcastReceiver.registerToContext();
-    }
-
-    /*
-     * Calligraphy font library implementation
-     */
-    @Override
-    protected void attachBaseContext(Context newBase) {
-
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     protected abstract int getLayoutFileId();

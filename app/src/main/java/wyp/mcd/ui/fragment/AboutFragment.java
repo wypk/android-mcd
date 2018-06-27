@@ -35,6 +35,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import lombok.NoArgsConstructor;
 import wyp.mcd.R;
+import wyp.mcd.component.android.AndroidUtil;
 import wyp.mcd.component.android.BasicFragment;
 import wyp.mcd.ui.activity.BrowseActivity;
 
@@ -59,6 +60,9 @@ public class AboutFragment extends BasicFragment {
     @BindView(R.id.rlApp)
     RelativeLayout rlApp;
 
+    @BindView(R.id.rlRate)
+    RelativeLayout rlRate;
+
     @Override
     public void createView() {
         lblScreenTitle.setText(Objects.requireNonNull(getActivity()).getResources().getString(R.string.title_about));
@@ -71,7 +75,6 @@ public class AboutFragment extends BasicFragment {
 
     @Override
     public void refresh() {
-
     }
 
     @OnClick(R.id.rlBrowse)
@@ -82,14 +85,12 @@ public class AboutFragment extends BasicFragment {
 
     @OnClick(R.id.rlApp)
     public void goAppLanding() {
-        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://wyphyoe.github.io/mcd/"));
-        startActivity(webIntent);
+        showOnWebView("https://wyphyoe.github.io/mcd/");
     }
 
     @OnClick(R.id.rlGithub)
     public void goGithub() {
-        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/wyphyoe/mcd-android"));
-        startActivity(webIntent);
+        showOnWebView("https://github.com/wyphyoe/mcd-android");
     }
 
     @OnClick(R.id.rlLibrariesCredit)
@@ -131,6 +132,9 @@ public class AboutFragment extends BasicFragment {
                 .setLibrary(new Library("Lottie",
                         "https://github.com/airbnb/lottie-android",
                         License.APACHE))
+                .setLibrary(new Library("JSoup",
+                        "https://jsoup.org/",
+                        License.APACHE))
                 .setPositiveButton(android.R.string.ok, (dialogInterface, i) -> {
                     // TODO:
                 });
@@ -139,7 +143,17 @@ public class AboutFragment extends BasicFragment {
 
     @OnClick(R.id.rlReportBugs)
     public void reportBugs() {
-        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/wyphyoe/mcd-android/issues"));
+        showOnWebView("https://github.com/wyphyoe/mcd-android/issues");
+    }
+
+    @OnClick(R.id.rlRate)
+    public void rateOnGooglePlay() {
+        AndroidUtil.goGooglePlayStore(getContext());
+    }
+
+    private void showOnWebView(String url) {
+        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(webIntent);
     }
 }
+

@@ -114,10 +114,8 @@ public class SearchMmListAdapter extends RecyclerView.Adapter<SearchMmListAdapte
 
             itemView.setOnClickListener(view -> {
                 EngToMmEntity engToMmEntity = this.adapter.dataSet.get(this.getAdapterPosition());
-
                 Intent intent = new Intent(this.mContext, DetailResultActivity.class);
                 intent.putExtra("vocabularyKey", engToMmEntity.getVocabulary());
-                intent.putExtra("typeKey", "( " + engToMmEntity.getType() + " )");
                 intent.putExtra("meaningKey", engToMmEntity.getMeaning());
                 this.mContext.startActivity(intent);
             });

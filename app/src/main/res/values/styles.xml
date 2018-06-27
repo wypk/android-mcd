@@ -31,7 +31,9 @@
         <item name="colorControlNormal">#c5c5c5</item>
         <item name="colorControlActivated">@color/blue_grey_100</item>
         <item name="colorControlHighlight">@color/blue_grey_100</item>
-        <item name="cardViewStyle">@style/CardView</item>
+        <item name="cardViewStyle">@style/CardView.Light</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
+        <item name="android:fontFamily">@font/quicksand_medium</item>
     </style>
 
 </resources>

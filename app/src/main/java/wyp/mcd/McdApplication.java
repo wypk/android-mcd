@@ -28,7 +28,6 @@ import com.crashlytics.android.Crashlytics;
 import com.crashlytics.android.answers.Answers;
 
 import io.fabric.sdk.android.Fabric;
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import wyp.mcd.component.android.AppLifecycle;
 import wyp.mcd.component.android.McdNotificationManager;
 import wyp.mcd.component.sharedpreferences.AppInfoStorage;
@@ -64,13 +63,6 @@ public class McdApplication extends Application {
          Make sure we use vector drawables
          */
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
-
-        /* Setup default font for app */
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/Gordita-Medium.otf")
-                .setFontAttrId(R.attr.fontPath)
-                .build()
-        );
 
         /* Setup notification for app */
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

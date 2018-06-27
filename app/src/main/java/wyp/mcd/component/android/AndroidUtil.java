@@ -29,9 +29,10 @@ import android.media.RingtoneManager;
 import android.net.ConnectivityManager;
 import android.net.Uri;
 
+import java.util.Objects;
+
 import wyp.mcd.R;
 import wyp.mcd.component.sharedpreferences.AppInfoStorage;
-import wyp.mcd.component.util.Logger;
 
 public class AndroidUtil {
 
@@ -82,11 +83,28 @@ public class AndroidUtil {
             e.printStackTrace();
         }
         assert packageInfo != null;
-        int versionNumber = packageInfo.versionCode;
-        String versionName = packageInfo.versionName;
-        Logger.log("Current version code is :" + versionNumber);
-        Logger.log("Current version name is :" + versionName);
+        return packageInfo.versionCode;
+    }
 
-        return versionNumber;
+    public static String getCurrentVersionName(Context context) {
+
+        PackageInfo packageInfo = null;
+        try {
+            packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        assert packageInfo != null;
+        return packageInfo.versionName;
+    }
+
+    public static void goGooglePlayStore(Context context) {
+        final String appPackageName = Objects.requireNonNull(context).getPackageName();
+        try {
+            context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+        } catch (android.content.ActivityNotFoundException exception) {
+            context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+            exception.printStackTrace();
+        }
     }
 }

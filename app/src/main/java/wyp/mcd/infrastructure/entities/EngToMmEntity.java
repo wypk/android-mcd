@@ -36,15 +36,11 @@ public class EngToMmEntity extends RoomEntity {
     @ColumnInfo(name = "vocabulary", index = true)
     private String vocabulary;
 
-    @ColumnInfo(name = "type")
-    private String type;
-
     @ColumnInfo(name = "meaning")
     private String meaning;
 
-    public EngToMmEntity(String vocabulary, String type, String meaning) {
+    public EngToMmEntity(String vocabulary, String meaning) {
         this.vocabulary = vocabulary;
-        this.type = type;
         this.meaning = meaning;
     }
 }

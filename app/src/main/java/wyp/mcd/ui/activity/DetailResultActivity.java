@@ -54,13 +54,10 @@ import wyp.mcd.viewmodel.BookmarksViewModel;
 @SuppressWarnings("deprecation")
 public class DetailResultActivity extends BasicActivity implements TextToSpeech.OnInitListener, PopupMenu.PopupMenuListener {
 
-    private static final String APP_LINK = "\nhttps://wyphyoe.github.io/mcd/";
+    private static final String APP_LINK = "\nhttps://goo.gl/NPRPgx";
 
     @BindView(R.id.btnPronunciation)
     AppCompatImageButton btnPronunciation;
-
-    @BindView(R.id.btnContentCopy)
-    AppCompatImageButton btnContentCopy;
 
     @BindView(R.id.fabGoogleTranslate)
     FloatingActionButton btnGoogleTranslate;
@@ -68,21 +65,14 @@ public class DetailResultActivity extends BasicActivity implements TextToSpeech.
     @BindView(R.id.toggleImageBtn)
     AppCompatImageButton toggleBtnBookmark;
 
-    @BindView(R.id.btnMore)
-    AppCompatImageButton btnMore;
-
     @BindView(R.id.lblVocabulary)
     AppCompatTextView lblVocabulary;
-
-    @BindView(R.id.lblType)
-    AppCompatTextView lblType;
 
     @BindView(R.id.lblMeaning)
     ExpandableTextView lblMeaning;
 
     private boolean internetAvailableWatcher;
     private String vocabulary;
-    private String type;
     private String meaning;
     private boolean bookmarksWatcher;
     private TextToSpeech textToSpeech;
@@ -103,53 +93,18 @@ public class DetailResultActivity extends BasicActivity implements TextToSpeech.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /* Implement fontChecker */
-        SystemFontChecker fontChecker = SystemFontChecker.getInstance();
 
         /* Implement View Model */
         bookmarksViewModel = ViewModelProviders.of(this).get(BookmarksViewModel.class);
 
-        /* Get The String from previous fragment */
-        Intent intent = getIntent();
-        vocabulary = intent.getStringExtra("vocabularyKey");
-        type = intent.getStringExtra("typeKey");
-        meaning = intent.getStringExtra("meaningKey");
+        this.initUI();
 
-        /* Set Text */
-        lblVocabulary.setText(vocabulary);
-        lblType.setText(type);
-        lblMeaning.setText(meaning);
-
-        /* Need to assign bookmarksWatcher related on db which is already exist in db or not exist */
-        if (bookmarksViewModel.getBookmarkCount(vocabulary) != 0) {
-            bookmarksWatcher = true;
-            toggleBtnBookmark.setImageResource(R.drawable.ic_bookmarked);
-        }
-
-        /*
-         This is goBrowse solve for overwriting of super class's onCreate Method
-         */
-        final AppCompatTextView lblScreenTitle = this.findViewById(R.id.lblScreenTitle);
-        lblScreenTitle.setText(vocabulary);
-
-        ScrollView svBody = findViewById(R.id.svBody);
-        svBody.getViewTreeObserver().addOnScrollChangedListener(() -> {
-            int scrollY = svBody.getScrollY(); // For Vertical ScrollView
-            if (scrollY > 0 && btnGoogleTranslate.getVisibility() == View.VISIBLE)
-                btnGoogleTranslate.hide();
-            else
-                btnGoogleTranslate.show();
-        });
+        this.floatingButtonVisibility();
 
         /* Implement text to speech */
         this.textToSpeech = new TextToSpeech(this, this);
         /* Implement popup menu */
         this.popupMenu = new PopupMenu(this, this);
-
-        /*Change font unicode to zawgyi for share */
-        if (!fontChecker.isUnicode(this)) {
-            meaning = Rabbit.uni2zg(meaning);
-        }
     }
 
     @Override
@@ -212,16 +167,14 @@ public class DetailResultActivity extends BasicActivity implements TextToSpeech.
         speakOut();
     }
 
-    @OnClick(R.id.btnContentCopy)
-    public void doContentCopy() {
+    public void copyContent(View view) {
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-        ClipData clip = ClipData.newPlainText("Computer Dictionary", vocabulary + "\n" + type + "\n" + meaning + APP_LINK);
+        ClipData clip = ClipData.newPlainText("Computer Dictionary", vocabulary + "\n\n" + meaning + "\n" + APP_LINK);
         assert clipboard != null;
         Alerter.showAlerter(this, "Copied to clipboard.", R.color.green_700, R.drawable.ic_success);
         clipboard.setPrimaryClip(clip);
     }
 
-    @OnClick(R.id.btnMore)
     public void showMoreActions(View view) {
         popupMenu.showPopupMenu(view);
     }
@@ -257,6 +210,36 @@ public class DetailResultActivity extends BasicActivity implements TextToSpeech.
         textToSpeech.speak(vocabulary, TextToSpeech.QUEUE_FLUSH, null);
     }
 
+    private void noInternetConnectionAlerter() {
+        Alerter.showAlerter(this, "No internet connection.", R.color.red_A700, R.drawable.ic_no_internet);
+    }
+
+    /* Get The String from previous fragment */
+    private void initUI() {
+
+        Intent intent = getIntent();
+        vocabulary = intent.getStringExtra("vocabularyKey");
+        meaning = intent.getStringExtra("meaningKey");
+
+        /* Set Text */
+        lblVocabulary.setText(vocabulary);
+        lblMeaning.setText(meaning);
+
+         /*
+         This is goBrowse solve for overwriting of super class's onCreate Method
+         */
+        final AppCompatTextView lblScreenTitle = this.findViewById(R.id.lblScreenTitle);
+        lblScreenTitle.setText(vocabulary);
+
+        /* Need to assign bookmarksWatcher related on db which is already exist in db or not exist */
+        if (bookmarksViewModel.getBookmarkCount(vocabulary) != 0) {
+            bookmarksWatcher = true;
+            toggleBtnBookmark.setImageResource(R.drawable.ic_bookmarked);
+        }else {
+            toggleBtnBookmark.setImageResource(R.drawable.ic_bookmark_border);
+        }
+    }
+
     @Override
     public void goToGoogleSearch() {
         if (internetAvailableWatcher) {
@@ -277,14 +260,31 @@ public class DetailResultActivity extends BasicActivity implements TextToSpeech.
 
     @Override
     public void shareTranslation() {
+
+        /* Implement fontChecker */
+        SystemFontChecker fontChecker = SystemFontChecker.getInstance();
+
+        /*Change font zawgyi to unicode */
+        if (fontChecker.isUnicode(this)) {
+            meaning = Rabbit.zg2uni(meaning);
+        }
+
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
 //        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Computer Dictionary");
-        shareIntent.putExtra(Intent.EXTRA_TEXT, vocabulary + "\n" + type + "\n" + meaning + APP_LINK);
+        shareIntent.putExtra(Intent.EXTRA_TEXT, vocabulary + "\n\n" + meaning + "\n" + APP_LINK);
         shareIntent.setType("text/plain");
         startActivity(Intent.createChooser(shareIntent, "Share with"));
     }
 
-    private void noInternetConnectionAlerter() {
-        Alerter.showAlerter(this, "No internet connection.", R.color.red_A700, R.drawable.ic_no_internet);
+    private void floatingButtonVisibility() {
+        ScrollView svBody = findViewById(R.id.svBody);
+        svBody.getViewTreeObserver().addOnScrollChangedListener(() -> {
+            int scrollY = svBody.getScrollY(); // For Vertical ScrollView
+            if (scrollY > 0 && btnGoogleTranslate.getVisibility() == View.VISIBLE)
+                btnGoogleTranslate.hide();
+            else
+                btnGoogleTranslate.show();
+        });
+
     }
 }

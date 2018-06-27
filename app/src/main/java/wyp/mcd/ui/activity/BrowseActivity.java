@@ -24,6 +24,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.View;
 
 import com.l4digital.fastscroll.FastScrollRecyclerView;
 
@@ -57,9 +58,8 @@ public class BrowseActivity extends BasicActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        dictionaryType = DictionaryType.ENG_TO_MM;
-        toggleBtnDictionaryType.setImageResource(R.drawable.ic_myanmar);
-        dictionaryTypeWatcher = true;
+        /* Set Default when create activity */
+        this.setDefaultDictionaryType();
 
         /* Implement adapter */
         searchMmListAdapter = new SearchMmListAdapter(new ArrayList<>(), this);
@@ -135,6 +135,12 @@ public class BrowseActivity extends BasicActivity {
                 searchEngListAdapter.addItems(engToEngEntities);
             });
         }
+    }
+
+    private void setDefaultDictionaryType() {
+        dictionaryType = DictionaryType.ENG_TO_MM;
+        toggleBtnDictionaryType.setImageResource(R.drawable.ic_myanmar);
+        dictionaryTypeWatcher = true;
     }
 
 }

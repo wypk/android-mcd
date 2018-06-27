@@ -72,21 +72,21 @@
 
                     <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/lblAppName"
-                        fontPath="fonts/Gordita-Medium.otf"
+                        android:fontFamily="@font/quicksand_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/app_name"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/text_size_medium" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        fontPath="fonts/Gordita-Regular.otf"
+                        android:fontFamily="@font/quicksand_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/lblAppName"
                         android:gravity="center"
                         android:text="@string/version"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/text_size_regular" />
                 </RelativeLayout>
             </RelativeLayout>
@@ -117,21 +117,20 @@
                         android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="32dp"
-                        android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:scaleType="centerInside"
                         app:srcCompat="@drawable/ic_browse"
                         tools:ignore="VectorDrawableCompat"
                         tools:targetApi="lollipop" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        fontPath="fonts/Gordita-Regular.otf"
+                        android:fontFamily="@font/quicksand_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="16dp"
                         android:layout_toEndOf="@id/imvBrowse"
                         android:text="@string/title_browse"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/text_size_regular" />
 
                 </RelativeLayout>
@@ -144,7 +143,7 @@
                     android:layout_marginEnd="0dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="0dp"
-                    android:background="@color/grey_300"
+                    android:background="@color/grey_200"
                     android:layerType="software" />
 
                 <RelativeLayout
@@ -164,21 +163,20 @@
                         android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="32dp"
-                        android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:scaleType="centerInside"
                         app:srcCompat="@drawable/ic_github"
                         tools:ignore="VectorDrawableCompat"
                         tools:targetApi="lollipop" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        fontPath="fonts/Gordita-Regular.otf"
+                        android:fontFamily="@font/quicksand_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="16dp"
                         android:layout_toEndOf="@+id/imvGithub"
                         android:text="@string/github"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/text_size_regular" />
 
                 </RelativeLayout>
@@ -191,7 +189,7 @@
                     android:layout_marginEnd="0dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="0dp"
-                    android:background="@color/grey_300"
+                    android:background="@color/grey_200"
                     android:layerType="software" />
 
                 <RelativeLayout
@@ -211,21 +209,20 @@
                         android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="32dp"
-                        android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:scaleType="centerInside"
                         app:srcCompat="@drawable/ic_plugin"
                         tools:ignore="VectorDrawableCompat"
                         tools:targetApi="lollipop" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        fontPath="fonts/Gordita-Regular.otf"
+                        android:fontFamily="@font/quicksand_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="16dp"
                         android:layout_toEndOf="@+id/imvLicense"
                         android:text="@string/libraries"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/text_size_regular" />
 
                 </RelativeLayout>
@@ -238,7 +235,7 @@
                     android:layout_marginEnd="0dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="0dp"
-                    android:background="@color/grey_300"
+                    android:background="@color/grey_200"
                     android:layerType="software" />
 
                 <RelativeLayout
@@ -258,21 +255,66 @@
                         android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="32dp"
-                        android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:scaleType="centerInside"
                         app:srcCompat="@drawable/ic_bug"
                         tools:ignore="VectorDrawableCompat"
                         tools:targetApi="lollipop" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        fontPath="fonts/Gordita-Regular.otf"
+                        android:fontFamily="@font/quicksand_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="16dp"
                         android:layout_toEndOf="@+id/imvBugs"
                         android:text="@string/report_bugs"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_regular" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/vwDottedLine04"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlReportBugs"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/grey_200"
+                    android:layerType="software" />
+
+                <RelativeLayout
+                    android:id="@+id/rlRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/vwDottedLine04"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    tools:targetApi="lollipop">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/imvRate"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="32dp"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/ic_review"
+                        tools:ignore="VectorDrawableCompat"
+                        tools:targetApi="lollipop" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:fontFamily="@font/quicksand_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@+id/imvRate"
+                        android:text="@string/rate_app"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/text_size_regular" />
 
                 </RelativeLayout>

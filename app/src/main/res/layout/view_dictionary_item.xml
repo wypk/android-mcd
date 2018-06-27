@@ -32,19 +32,20 @@
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/lblVocabulary"
-        fontPath="fonts/Gordita-Medium.otf"
+        android:fontFamily="@font/quicksand_medium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:gravity="center_vertical"
         android:maxLines="1"
         android:text="@string/app_name"
-        android:textColor="@color/black"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="@dimen/text_size_regular" />
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/lblMeaning"
-        fontPath="fonts/Pyidaungsu-Bold.ttf"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/zawgyi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/lblVocabulary"
@@ -53,7 +54,8 @@
         android:gravity="center_vertical"
         android:maxLines="2"
         android:text="@string/app_name"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_size_regular" />
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size_regular"
+        tools:targetApi="o" />
 
 </RelativeLayout>

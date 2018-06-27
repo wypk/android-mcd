@@ -21,6 +21,7 @@
 package wyp.mcd.ui.fragment;
 
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Intent;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.LinearLayoutManager;
@@ -29,14 +30,19 @@ import android.view.View;
 import com.l4digital.fastscroll.FastScrollRecyclerView;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import butterknife.OnTextChanged;
 import lombok.NoArgsConstructor;
 import wyp.mcd.R;
+import wyp.mcd.component.android.AndroidUtil;
 import wyp.mcd.component.android.BasicFragment;
 import wyp.mcd.component.type.DictionaryType;
+import wyp.mcd.component.util.GetVersionCodeUtils;
+import wyp.mcd.component.util.Logger;
+import wyp.mcd.ui.activity.AppUpdateActivity;
 import wyp.mcd.ui.adapter.SearchEngListAdapter;
 import wyp.mcd.ui.adapter.SearchMmListAdapter;
 import wyp.mcd.ui.uicomponents.LanguageOptionsPopupMenu;
@@ -84,6 +90,8 @@ public class SearchFragment extends BasicFragment implements LanguageOptionsPopu
 
         /* Instantiate view model */
         searchViewModel = ViewModelProviders.of(this).get(SearchViewModel.class);
+
+        this.checkAppUpdate();
     }
 
     @Override
@@ -136,7 +144,6 @@ public class SearchFragment extends BasicFragment implements LanguageOptionsPopu
 
         if (DictionaryType.ENG_TO_MM == dictionaryType) {
             recyclerViewSearch.setAdapter(searchMmListAdapter);
-
             searchViewModel.findEngToMm(vocabulary).observe(this, engToMmEntities -> {
                 assert engToMmEntities != null;
                 searchMmListAdapter.addItem(engToMmEntities);
@@ -149,5 +156,17 @@ public class SearchFragment extends BasicFragment implements LanguageOptionsPopu
                 searchEngListAdapter.addItems(engToEngEntities);
             });
         }
+    }
+
+    private void checkAppUpdate() {
+        /* Call App Updater */
+        new GetVersionCodeUtils(onlineVersion -> {
+            Logger.log("Online Version Name is : " + onlineVersion);
+            if (onlineVersion != null) {
+                if (Double.parseDouble(AndroidUtil.getCurrentVersionName(Objects.requireNonNull(getActivity()))) < Double.parseDouble(onlineVersion)) {
+                    startActivity(new Intent(getActivity(), AppUpdateActivity.class));
+                }
+            }
+        }).execute();
     }
 }

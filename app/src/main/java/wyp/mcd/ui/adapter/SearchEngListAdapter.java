@@ -113,7 +113,6 @@ public class SearchEngListAdapter extends RecyclerView.Adapter<SearchEngListAdap
                 EngToEngEntity engToEngEntity = this.adapter.dataSet.get(getAdapterPosition());
                 Intent intent = new Intent(this.mContext, DetailResultActivity.class);
                 intent.putExtra("vocabularyKey", engToEngEntity.getVocabulary());
-                intent.putExtra("typeKey", "");
                 intent.putExtra("meaningKey", engToEngEntity.getMeaning());
                 this.mContext.startActivity(intent);
             });

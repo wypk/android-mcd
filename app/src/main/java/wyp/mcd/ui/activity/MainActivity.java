@@ -20,7 +20,6 @@
 
 package wyp.mcd.ui.activity;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -30,7 +29,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 import wyp.mcd.R;
 import wyp.mcd.ui.behavior.BottomNavigationBehavior;
 import wyp.mcd.ui.fragment.AboutFragment;
@@ -79,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
 
         /* Load the store fragment by default */
         loadFragment(new SearchFragment());
+
+
     }
 
     /*
@@ -98,18 +98,9 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    /**
-     * Calligraphy Inject into Context
-     */
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
-
     @Override
     public void onBackPressed() {
         super.onBackPressed();
         this.finish();
     }
-
 }

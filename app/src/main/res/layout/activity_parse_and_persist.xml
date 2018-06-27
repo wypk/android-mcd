@@ -34,14 +34,16 @@
         app:lottie_loop="true" />
 
     <android.support.v7.widget.AppCompatTextView
-        fontPath="fonts/Gordita-Medium.otf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lottie_animation_view"
         android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
-        android:text="@string/txt_info"
         android:lineSpacingExtra="4sp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="@string/txt_info"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/text_size_regular" />
+        android:textSize="@dimen/text_size_regular"
+        tools:targetApi="o" />
 </RelativeLayout>

@@ -18,19 +18,23 @@
   ~ limitations under the License.
   -->
 
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/expandable_text"
-        fontPath="fonts/Pyidaungsu-Bold.ttf"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/zawgyi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="gravity"
-        android:textSize="@dimen/text_size_huge" />
+        android:lineSpacingExtra="6sp"
+        android:textSize="@dimen/text_size_huge"
+        tools:targetApi="o" />
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/expand_collapse"
-        fontPath="fonts/Gordita-Medium.otf"
+        android:fontFamily="@font/quicksand_medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"

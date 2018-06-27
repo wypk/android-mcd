@@ -1,5 +1,7 @@
 package wyp.mcd.firebase;
 
+import android.annotation.SuppressLint;
+
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -7,9 +9,10 @@ import wyp.mcd.R;
 import wyp.mcd.component.android.AndroidUtil;
 import wyp.mcd.component.android.McdNotificationManager;
 import wyp.mcd.component.util.Logger;
-import wyp.mcd.ui.activity.MainActivity;
+import wyp.mcd.ui.activity.AppUpdateActivity;
 
 
+@SuppressLint("Registered")
 public class ExamResultFirebaseMessaginService extends FirebaseMessagingService {
 
     @Override
@@ -31,6 +34,6 @@ public class ExamResultFirebaseMessaginService extends FirebaseMessagingService 
         McdNotificationManager.notify(
                 this, McdNotificationManager.CHAT_CHANNEL_ID,
                 getResources().getString(R.string.app_name),
-                messageBody, MainActivity.class);
+                messageBody, AppUpdateActivity.class);
     }
 }

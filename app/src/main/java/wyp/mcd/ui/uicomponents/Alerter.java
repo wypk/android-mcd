@@ -38,7 +38,7 @@ public class Alerter {
                 .setTextAppearance(R.style.AlertTextAppearance_Text)
                 .setTextTypeface(Typeface.createFromAsset(
                         context.getAssets(),
-                        "fonts/Gordita-Medium.otf"))
+                        "fonts/Moderat.ttf"))
                 .setIconColorFilter(0) // Optional - Removes white tint
                 .setBackgroundColorRes(colorResId)
                 .setIcon(drawableResId)
