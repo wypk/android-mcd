@@ -1,29 +1,50 @@
-<!--
-  ~ Copyright (C) 2018
-  ~
-  ~ Source code is created by Elissa Software
-  ~ Dictionary data is owned by UCST
-  ~ Database is implemented by Salai Chit Oo Latt
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~ http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
-
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
-    android:viewportHeight="24.0"
-    android:viewportWidth="24.0">
+    android:viewportHeight="32"
+    android:viewportWidth="32">
     <path
-        android:fillColor="#FFFFFFFF"
-        android:pathData="M19.35,10.04C18.67,6.59 15.64,4 12,4c-1.48,0 -2.85,0.43 -4.01,1.17l1.46,1.46C10.21,6.23 11.08,6 12,6c3.04,0 5.5,2.46 5.5,5.5v0.5H19c1.66,0 3,1.34 3,3 0,1.13 -0.64,2.11 -1.56,2.62l1.45,1.45C23.16,18.16 24,16.68 24,15c0,-2.64 -2.05,-4.78 -4.65,-4.96zM3,5.27l2.75,2.74C2.56,8.15 0,10.77 0,14c0,3.31 2.69,6 6,6h11.73l2,2L21,20.73 4.27,4 3,5.27zM7.73,10l8,8H6c-2.21,0 -4,-1.79 -4,-4s1.79,-4 4,-4h1.73z" />
+        android:fillColor="#FFFFFF"
+        android:pathData="M6.858,24.847L24.0336,7.6714A1,1 69.2518,0 1,25.4478 7.6714L25.4478,7.6714A1,1 86.8146,0 1,25.4478 9.0856L8.2722,26.2612A1,1 56.4453,0 1,6.858 26.2612L6.858,26.2612A1,1 0,0 1,6.858 24.847z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M5.83,17.23L10.77,22.17"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M7.63,16.12L12.25,20.73"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M8.19,13.81L13.69,19.3"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M8.87,11.63L15.1,17.86"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M10.22,10.09L16.56,16.43"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M11.95,8.99L17.96,15"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M14.19,8.38L19.37,13.56"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M8,23h2.95l2,-2H8a2,2 0,0 1,0 -4h0.12a1,1 0,0 0,1 -1.14A6.07,6.07 0,0 1,9 15a6,6 0,0 1,11.73 -1.74l1.54,-1.54A8,8 0,0 0,7 15s0,0.08 0,0.13A4,4 0,0 0,8 23Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24.84,12.53l-1.56,1.56A3.5,3.5 0,0 1,22.5 21H16.37l-2,2H22.5a5.5,5.5 0,0 0,2.34 -10.47Z" />
 </vector>

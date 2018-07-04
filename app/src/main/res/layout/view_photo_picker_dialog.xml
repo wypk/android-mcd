@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_dialog_background"
+    android:padding="32dp">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/lblWantTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:text="@string/view_pop_up_image_picker_dialog__choose_photo"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnTakePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/lblWantTo"
+        android:background="@drawable/ripple_borderless_action_button"
+        android:text="@string/view_pop_up_image_picker_dialog__take_photo"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnFromGallery"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/btnTakePhoto"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ripple_borderless_action_button"
+        android:text="@string/view_pop_up_image_picker_dialog__from_gallery"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium" />
+
+    <View
+        android:id="@+id/vwDottedLine01"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/btnFromGallery"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_dotted_hline"
+        android:layerType="software" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/vwDottedLine01"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ripple_borderless_action_button"
+        android:text="@string/view_pop_up_image_picker_dialog__cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium" />
+</RelativeLayout>

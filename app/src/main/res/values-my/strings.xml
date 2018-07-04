@@ -1,0 +1,162 @@
+<resources>
+    <string name="app_name">Shwe Bill</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+    <string name="anonymous">…</string>
+
+    <string name="activity_splash__tnc">By continuing, you agree to our <b><a href="http://google.com">Terms &amp; Conditions</a></b>, <a href="http://google.com">Terms of Use</a> and <b><a href="http://yahoo.com">Privacy Policy</a></b></string>
+
+    <string name="activity_select_language__select_an_language">ဘာသာစကားေ႐ြးခ်ယ္ပါ</string>
+    <string name="activity_select_language__confirm">အတည္ျပဳ</string>
+    <string name="activity_select_language__english">အဂၤလိပ္</string>
+    <string name="activity_select_language__myanmar">ျမန္မာ</string>
+
+    <string name="activity_sign_in__sign_in">ဝင္မည္</string>
+    <string name="activity_sign_in__login_id">ေလာ့ဂ္အင္ အိုင္ဒီ</string>
+    <string name="activity_sign_in__password">စကားဝွက္</string>
+    <string name="activity_sign_in__forgot_password">အေကာင့္ေမ့</string>
+    <string name="activity_sign_in__do_not_have_an_account">အေကာင့္မရွိလွ်င္…</string>
+    <string name="activity_sign_in__register">အေကာင့္သစ္ဖြင့္မည္</string>
+
+    <string name="activity_sign_up__sign_up">အေကာင့္ျပဳလုပ္သည္</string>
+    <string name="activity_sign_up__tap_to_change_photo">ပ႐ိုဖိုင္ပုံခ်ိန္းမည္</string>
+    <string name="activity_sign_up__login_id">ေလာ့ဂ္အင္ အိုင္ဒီ</string>
+    <string name="activity_sign_up__full_name">နာမည္အျပည္အစုံ</string>
+    <string name="activity_sign_up__password">စကားဝွက္</string>
+    <string name="activity_sign_up__submit">ေပးပို႔</string>
+    <string name="activity_sign_up__already_have_an_account">အေကာင့္ရွိၿပီး…</string>
+    <string name="activity_sign_up__sign_in">ေလာ့ဂ္အင္ဝင္မည္</string>
+    <string name="activity_sign_up__choose_region">တိုင္း၊ ျပည္နယ္ေ႐ြးပါ</string>
+    <string name="activity_sign_up__choose_nickname">နာမည္ေျပာင္</string>
+    <string name="activity_sign_up__choose_native_town">ေမြးရပ္ဇာတိၿမိဳ႕</string>
+
+    <string-array name="activity_sign_up__regions_list">
+        <item>ကခ်င္ျပည္နယ္</item>
+        <item>ကယားျပည္နယ္</item>
+        <item>ကရင္ျပည္နယ္</item>
+        <item>ခ်င္းျပည္နယ္</item>
+        <item>စစ္ကိုင္းတိုင္း</item>
+        <item>တနသၤာရီတိုင္း</item>
+        <item>ေနျပည္ေတာ္တိုင္း</item>
+        <item>ပဲခူးတိုင္း</item>
+        <item>မေကြးတိုင္း</item>
+        <item>မႏၲေလးတိုင္း</item>
+        <item>မြန္ျပည္နယ္</item>
+        <item>ရခိုင္ျပည္နယ္</item>
+        <item>ရန္ကုန္တိုင္း</item>
+        <item>ရွမ္းျပည္နယ္</item>
+        <item>ဧရာဝတီတိုင္း</item>
+    </string-array>
+
+    <string name="activity_verify_phone_number__verify_your_number">ဖုန္းနံပါတ္အတည္ျပဳမည္</string>
+    <string name="activity_verify_phone_number__info">အတည္ျပဳကုဒ္ရယူရန္ ဖုန္းနံပါတ္ထည့္ပါ</string>
+    <string name="activity_verify_phone_number__country_code">+95</string>
+    <string name="activity_verify_phone_number__phone_number">ဖုန္းနံပါတ္</string>
+    <string name="activity_verify_phone_number__submit">ေပးပို႔</string>
+
+    <string name="activity_verify_code__verify_code">အတည္ျပဳကုဒ္</string>
+    <string name="activity_verify_code__please_type_code_sent_to_your_phone">အတည္ျပဳကုဒ္ ထည့္ရန္</string>
+    <string name="activity_verify_code__enter_code">အတည္ျပဳကုဒ္</string>
+    <string name="activity_verify_code__submit">ေပးပို႔</string>
+    <string name="activity_verify_code__do_not_get_the_code">ကုဒ္မရ၍</string>
+    <string name="activity_verify_code__resend_code">ကုဒ္ျပန္ပို႔</string>
+
+    <string name="activity_pin_code__enter_pin_code">လွ်ိဳ႕ဝွက္ကုဒ္</string>
+
+    <string name="navigation_drawer__transfer_balance">ေငြလႊဲေျပာင္းရန္</string>
+    <string name="navigation_drawer__transactions_history">ေငြျဖည့္ေငြလႊဲမွတ္တမ္း</string>
+    <string name="navigation_drawer__help_center">အကူအညီရယူရန္</string>
+    <string name="navigation_drawer__settings">ဆက္တင္မ်ား</string>
+    <string name="navigation_drawer__myanmar">ျမန္မာ</string>
+    <string name="navigation_drawer__english">English</string>
+
+    <string name="activity_top_up__country_code">+95</string>
+    <string name="activity_top_up__phone_number">ဖုန္းနံပါတ္</string>
+    <string name="activity_top_up__top_up">ေငြျဖည့္</string>
+
+    <string name="activity_forget_password__forget_password">အေကာင့္ေမ့</string>
+
+    <string name="activity_transfer_balance__transfer_balance">ေငြလႊဲေျပာင္းရန္</string>
+    <string name="activity_transfer_balance__balance">ေငြပမာဏ</string>
+    <string name="activity_transfer_balance__scan_and_transfer">QR ကုဒ္ဖတ္၍ လြဲေျပာင္းမည္</string>
+
+    <string name="activity_transactions_history__transactions_history">ေငြျဖည့္ေငြလႊဲမွတ္တမ္း</string>
+    <string name="activity_transactions_history__no_transactions_history">မွတ္တမ္းမရွိေသးပါ</string>
+
+    <string name="activity_help_center__help_center">အကူအညီရယူရန္</string>
+
+    <string name="activity_settings__settings">ဆက္တင္မ်ား</string>
+    <string name="activity_settings__change_password">စကားဝွက္ ေျပာင္းရန္</string>
+    <string name="activity_settings__change_pin">လွ်ိဳ႕ဝွက္ကုဒ္ ေျပာင္းရန္</string>
+
+    <string name="activity_change_password__change_password">စကားဝွက္ ေျပာင္းရန္</string>
+    <string name="activity_change_password__old_password">စကားဝွက္အ​​ေဟာင္း</string>
+    <string name="activity_change_password__new_password">စကားဝွက္အသစ္</string>
+
+    <string name="activity_profile__my_profile">ပ႐ိုဖိုင္</string>
+    <string name="activity_profile__my_qr_code">QR ကုဒ္</string>
+    <string name="activity_profile__check_balance">ေငြစစ္ရန္</string>
+
+    <string name="activity_my_qr_code__my_qr_code">QR ကုဒ္</string>
+    <string name="activity_qr_code__my_profile">QR ကုဒ္</string>
+    <string name="activity_qr_code__save">သိမ္းမည္</string>
+    <string name="activity_qr_code__share">မွ်ေဝရန္</string>
+    <string name="activity_qr_code__qr_hint">QR ကုဒ္ကို သုံးျခင္းျဖင့္ ေငြလႊဲေျပာင္းမႈကို လြယ္ကူေစႏိုင္ပါသည္ ေအာက္တြင္ျပထားသည္မွာ သင္၏ ကိုယ္ပိုင္ကုဒ္ျဖစ္သည္</string>
+
+    <string name="transaction_type__top_up">ေငြျဖည့္</string>
+    <string name="transaction_type__transfer">ေငြလႊဲ</string>
+
+    <string name="fragment_transactions_history__operator">ေအာ္ပေရတာ :</string>
+    <string name="fragment_transactions_history__date">ေန႔စြဲ :</string>
+
+    <string name="fragment_transactions_history__all">အားလံုး</string>
+
+    <string name="fragment_transactions_history__choose_operator">Operator ေ႐ြးပါ</string>
+    <string name="fragment_transactions_history__choose_label">ေ႐ြးမည္</string>
+    <string-array name="fragment_transactions_history__operators_list">
+        <item>All</item>
+        <item>MPT</item>
+        <item>MPT_Eload</item>
+        <item>Telenor</item>
+        <item>Ooredoo</item>
+        <item>MyTel</item>
+        <item>MecTel</item>
+    </string-array>
+
+    <string name="fragment_transactions_history__choose_date">ေန႔စြဲေ႐ြးပါ</string>
+    <string-array name="fragment_transactions_history__filter_date">
+        <item>အားလံုး</item>
+        <item>ယေန႔</item>
+        <item>စိတ္ႀကိဳက္ ေန႔စြဲ</item>
+    </string-array>
+
+    <string name="fragment_transactions_history__type">အမ်ိဳးအစား :</string>
+
+    <string name="fragment_transactions_history__choose_type">အမ်ိဳးအစား ေ႐ြးပါ</string>
+    <string-array name="fragment_transactions_history__filter_transfer_type">
+        <item>All</item>
+        <item>Send</item>
+        <item>Receive</item>
+    </string-array>
+
+    <string name="strings_validation_errors__require_login_id">ေလာ့ဂ္အင္ အိုင္ဒီ လိုအပ္ပါသည္။</string>
+    <string name="strings_validation_errors__invalid_login_id_format">Login Id accepts A–Z, 0–9, underscore and dot characters only.</string>
+    <string name="strings_validation_errors__invalid_login_id_length">Login Id must not be longer than 16 characters.</string>
+    <string name="strings_validation_errors__login_id_taken">ေလာ့ဂ္အင္ အိုင္ဒီ ရွိႏွင့္ေနပါသည္။</string>
+    <string name="strings_validation_errors__require_full_name">နာမည္ လိုအပ္ပါသည္။</string>
+    <string name="strings_validation_errors__invalid_full_name_format">Full Name accepts A–Z, 0–9, underscore and dot characters only.</string>
+    <string name="strings_validation_errors__invalid_full_name_length">Full Name must not be longer than 30 characters.</string>
+    <string name="strings_validation_errors__require_phone_number">ဖုန္းနံပါတ္ လိုအပ္ပါသည္။</string>
+    <string name="strings_validation_errors__require_password">စကားဝွက္ လိုအပ္ပါသည္။</string>
+    <string name="strings_validation_errors__invalid_password_length">Password must not be longer than 36 characters.</string>
+    <string name="strings_validation_errors__submit_without_photo">Please select photo before you submit for registration ?</string>
+    <string name="strings_validation_errors__require_verify_code">အတည္ျပဳကုဒ္ လိုအပ္ပါသည္။</string>
+    <string name="strings_validation_errors__invalid_verify_code_length">ကုဒ္သည္ ၆လုံးရွိရပါမည္။</string>
+    <string name="strings_validation_errors__require_balance">ေငြပမာဏထည့္ပါ။</string>
+    <string name="strings_validation_errors__require_region">တိုင္း၊ ျပည္နယ္ေ႐ြးေပးပါ။</string>
+    <string name="strings_validation_errors__require_security_questions">လံုျခံဳေရးေမးခြန္း ျဖည့္ပါ။</string>
+
+    <string name="MESSAGE_LOCAL__INTERNET_CONNECTION_ERROR">အင္တာနက္ ကြန္နက္ရွင္ မရွိပါ။</string>
+    <string name="MESSAGE_LOCAL__GENERIC_EXCEPTION">တစ္စုံတရာမွားယြင္းေနပါသည္။ ျပန္လည္ႀကိဳးစားၾကည့္ပါ။</string>
+
+</resources>

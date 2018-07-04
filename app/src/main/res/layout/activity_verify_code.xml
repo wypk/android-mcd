@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_verify_code"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.VerifyCodeActivity">
+
+    <include
+        android:id="@+id/rlHeader"
+        layout="@layout/view_screen_title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rlBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlHeader"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="32dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lblVerifyInfo"
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:fontFamily="@font/zawgyi"
+            android:lineSpacingExtra="6sp"
+            android:text="@string/activity_verify_code__please_type_code_sent_to_your_phone"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_size_regular" />
+
+        <RelativeLayout
+            android:id="@+id/rlForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblVerifyInfo"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="64dp">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/txtCode"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@null"
+                android:drawableEnd="@drawable/ic_1565c0_menu"
+                android:hint="@string/activity_verify_code__enter_code"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:fontFamily="@font/zawgyi"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_medium"
+                tools:ignore="RtlCompat" />
+
+            <View
+                android:id="@+id/line01"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/txtCode"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorPrimary"
+                android:layerType="software" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/line01"
+                android:onClick="goPinCodeScreen"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="54dp"
+                android:background="@drawable/ripple_borderless_action_button"
+                android:maxLines="1"
+                android:paddingEnd="8dp"
+                android:fontFamily="@font/zawgyi"
+                android:paddingStart="8dp"
+                android:text="@string/activity_verify_code__submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_regular" />
+
+            <RelativeLayout
+                android:id="@+id/rlNoCodeReceived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnSubmit"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="18dp"
+                android:gravity="center">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/lblNoCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="6sp"
+                    android:text="@string/activity_verify_code__do_not_get_the_code"
+                    android:fontFamily="@font/zawgyi"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_regular" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/lblRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/lblNoCode"
+                    android:lineSpacingExtra="6sp"
+                    android:text="@string/activity_verify_code__resend_code"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/text_size_regular"
+                    android:fontFamily="@font/zawgyi"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

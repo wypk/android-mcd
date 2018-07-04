@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.SettingsActivity">
+
+    <include
+        android:id="@+id/rlHeader"
+        layout="@layout/view_screen_title_bar" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlHeader"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="1dp"
+        android:layout_centerHorizontal="true"
+        app:cardElevation="1dp"
+        app:cardMaxElevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <RelativeLayout
+                android:id="@+id/rlChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="goChanePasswordScreen"
+                tools:targetApi="lollipop">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/lblChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/activity_settings__change_password"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_toLeftOf="@id/imvRightArrow01"
+                    android:fontFamily="@font/zawgyi"
+                    android:textSize="@dimen/text_size_medium"
+                    android:layout_marginStart="16dp"
+                    android:layout_toStartOf="@id/imvRightArrow01" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/imvRightArrow01"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_arrow_right"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    tools:targetApi="lollipop"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlHChangePin"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_below="@id/rlChangePassword"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                tools:targetApi="lollipop">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/lblChangePin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/activity_settings__change_pin"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_toLeftOf="@id/imvRightArrow02"
+                    android:fontFamily="@font/zawgyi"
+                    android:textSize="@dimen/text_size_medium"
+                    android:layout_marginStart="16dp"
+                    android:layout_toStartOf="@id/imvRightArrow02" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/imvRightArrow02"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_arrow_right"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    tools:targetApi="lollipop"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_dialog_background">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/lblTitle"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Title#"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size_huge" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/lblMessage"
+        fontPath="fonts/Pyidaungsu-Bold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblTitle"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:lineSpacingExtra="6sp"
+        android:text="Message#"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size_large" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/lblMessage"
+        android:layout_centerHorizontal="true"
+        android:background="@color/grey_300"
+        android:layerType="software" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnOk"
+
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_below="@+id/line1"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="OK"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size_large" />
+</RelativeLayout>

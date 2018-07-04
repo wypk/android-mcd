@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_in"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.SignInActivity">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/lblSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center_horizontal"
+        android:text="@string/activity_sign_in__sign_in"
+        android:fontFamily="@font/zawgyi"
+        android:textColor="@color/colorPrimary"
+        android:textSize="32sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lblSignIn"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="58dp">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtLoginId"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:fontFamily="@font/zawgyi"
+            android:drawableEnd="@drawable/ic_1565c0_username_sign"
+            android:hint="@string/activity_sign_in__login_id"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_regular"
+            tools:ignore="RtlCompat" />
+
+        <View
+            android:id="@+id/line01"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/txtLoginId"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorPrimary"
+            android:layerType="software" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_below="@id/line01"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp"
+            android:background="@null"
+            android:fontFamily="@font/zawgyi"
+            android:drawableEnd="@drawable/ic_1565c0_password"
+            android:hint="@string/activity_sign_in__password"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="32"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_regular"
+            tools:ignore="RtlCompat" />
+
+        <View
+            android:id="@+id/line02"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/txtPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorPrimary"
+            android:layerType="software" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/llcActionButtonGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line02"
+            android:layout_marginTop="32dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnForgot"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/zawgyi"
+                android:background="@drawable/ripple_borderless_action_button_light_gray"
+                android:maxLines="1"
+                android:text="@string/activity_sign_in__forgot_password"
+                android:onClick="goForgetPasswordScreen"
+                android:layout_marginBottom="4dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_regular"
+                tools:ignore="RtlCompat" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/ripple_borderless_action_button"
+                android:maxLines="1"
+                android:onClick="doSignIn"
+                android:text="@string/activity_sign_in__sign_in"
+                android:fontFamily="@font/zawgyi"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_regular"
+                tools:ignore="RtlCompat" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:id="@+id/rlRegister"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llcActionButtonGroup"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center_horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/lblNoAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="6sp"
+                android:fontFamily="@font/zawgyi"
+                android:text="@string/activity_sign_in__do_not_have_an_account"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_regular" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/lblRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/zawgyi"
+                android:layout_toEndOf="@id/lblNoAccount"
+                android:background="?android:attr/selectableItemBackground"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/activity_sign_in__register"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_size_regular"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
