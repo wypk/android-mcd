@@ -1,168 +1,53 @@
-<resources>
-    <string name="app_name">Shwe Bill</string>
-    <string name="openDrawer">open_drawer</string>
-    <string name="closeDrawer">close_drawer</string>
-    <string name="anonymous">…</string>
+<!--
+  ~ Copyright (C) 2018
+  ~  Source code is created by Elissa Software
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and limitations under the License.
+  -->
 
-    <string name="activity_splash__tnc">By continuing, you agree to our <b><a href="http://google.com">Terms &amp; Conditions</a></b>, <a href="http://google.com">Terms of Use</a> and <b><a href="http://yahoo.com">Privacy Policy</a></b></string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Computer Dictionary</string>
 
-    <string name="activity_select_language__select_an_language">Select an language</string>
-    <string name="activity_select_language__confirm">Confirm</string>
-    <string name="activity_select_language__english">English</string>
-    <string name="activity_select_language__myanmar">Myanmar</string>
+    <string name="title_search">Search</string>
+    <string name="title_bookmarks">Bookmarks</string>
+    <string name="title_about">About</string>
+    <string name="title_browse">Browse</string>
 
-    <string name="activity_sign_in__sign_in">Sign In</string>
-    <string name="activity_sign_in__login_id">Login Id</string>
-    <string name="activity_sign_in__password">Password</string>
-    <string name="activity_sign_in__forgot_password">Forgot</string>
-    <string name="activity_sign_in__do_not_have_an_account">Don\'t have an account?</string>
-    <string name="activity_sign_in__register">Register</string>
+    <string name="search_in_google">Search in google</string>
+    <string name="search_in_wikipedia">Search in wikipedia</string>
+    <string name="share_translation">Share translation</string>
 
-    <string name="activity_sign_up__sign_up">Sign Up</string>
-    <string name="activity_sign_up__tap_to_change_photo">Tap to change photo.</string>
-    <string name="activity_sign_up__login_id">Login Id</string>
-    <string name="activity_sign_up__full_name">Full Name</string>
-    <string name="activity_sign_up__password">Password</string>
-    <string name="activity_sign_up__submit">Submit</string>
-    <string name="activity_sign_up__already_have_an_account">Already have an account?</string>
-    <string name="activity_sign_up__sign_in">Sign In</string>
-    <string name="activity_sign_up__choose_region">Choose your region</string>
-    <string name="activity_sign_up__choose_nickname">Nickname</string>
-    <string name="activity_sign_up__choose_native_town">Native Town</string>
+    <string name="search_bookmarks_hint" tools:ignore="ExtraTranslation">Search…</string>
+    <string name="no_bookmark">No bookmark</string>
 
-    <string-array name="activity_sign_up__regions_list">
-        <item>Kachin State</item>
-        <item>Kayah State</item>
-        <item>Kayin State</item>
-        <item>Chin State</item>
-        <item>Sagaing Region</item>
-        <item>Tanintharyi Region</item>
-        <item>Naypyidaw Region</item>
-        <item>Bago Region</item>
-        <item>Magway Region</item>
-        <item>Mandalay Region</item>
-        <item>Mon State</item>
-        <item>Rakhine State</item>
-        <item>Yangon Region</item>
-        <item>Shan State</item>
-        <item>Ayeyarwaddy Region</item>
-    </string-array>
+    <string name="eng_to_mm">English to Myanmar</string>
+    <string name="eng_to_eng">English to English</string>
 
-    <string name="activity_verify_phone_number__verify_your_number">Verify Your Number</string>
-    <string name="activity_verify_phone_number__info">Please enter your mobile number to receive a verification code.</string>
-    <string name="activity_verify_phone_number__country_code">+95</string>
-    <string name="activity_verify_phone_number__phone_number">Phone Number</string>
-    <string name="activity_verify_phone_number__submit">Submit</string>
+    <string name="expand_string">More</string>
+    <string name="collapsed_string">Less</string>
 
-    <string name="activity_verify_code__verify_code">Verify Code</string>
-    <string name="activity_verify_code__please_type_code_sent_to_your_phone">Please type code sent to your phone</string>
-    <string name="activity_verify_code__enter_code">Enter Code</string>
-    <string name="activity_verify_code__submit">Submit</string>
-    <string name="activity_verify_code__do_not_get_the_code">Don\'t get the code?</string>
-    <string name="activity_verify_code__resend_code">Resend Code</string>
+    <string name="confirm_delete_dialog_title">Delete</string>
+    <string name="confirm_delete_dialog_message">Are you sure you want to delete?</string>
 
-    <string name="activity_pin_code__enter_pin_code">Enter pin code</string>
-    <string name="navigation_drawer__transfer_balance">Transfer Balance</string>
-    <string name="navigation_drawer__transactions_history">Transactions History</string>
-    <string name="navigation_drawer__help_center">Help Center</string>
-    <string name="navigation_drawer__settings">Settings</string>
-    <string name="navigation_drawer__myanmar">ျမန္မာ</string>
-    <string name="navigation_drawer__english">English</string>
+    <string name="confirm_delete_all_dialog_title">Confirm</string>
+    <string name="confirm_delete_all_dialog_message">Are you sure you want to clear bookmarks?</string>
 
-    <string name="activity_top_up__country_code">+95</string>
-    <string name="activity_top_up__phone_number">Phone Number</string>
-    <string name="activity_top_up__top_up">Top Up</string>
+    <string name="confirm_delete_dialog_positive_button">Yes</string>
+    <string name="confirm_delete_dialog_negative_button">Cancel</string>
 
-    <string name="activity_forget_password__forget_password">Forget password</string>
-
-    <string name="activity_transfer_balance__transfer_balance">Transfer Balance</string>
-    <string name="activity_transfer_balance__balance">Balance</string>
-    <string name="activity_transfer_balance__scan_and_transfer">Scan and Transfer</string>
-
-    <string name="activity_transactions_history__transactions_history">Transactions History</string>
-    <string name="activity_transactions_history__no_transactions_history">No transactions</string>
-
-    <string name="activity_help_center__help_center">Help Center</string>
-
-    <string name="activity_settings__settings">Settings</string>
-    <string name="activity_settings__change_password">Change login password</string>
-    <string name="activity_settings__change_pin">Change pin</string>
-
-    <string name="activity_change_password__change_password">Change login password</string>
-    <string name="activity_change_password__old_password">Old password</string>
-    <string name="activity_change_password__new_password">New password</string>
-
-    <string name="activity_profile__my_profile">My Profile</string>
-    <string name="activity_profile__my_qr_code">My QR Code</string>
-    <string name="activity_profile__check_balance">Check Balance</string>
-
-    <string name="activity_my_qr_code__my_qr_code">My Qr Code</string>
-    <string name="activity_qr_code__my_profile">My QR</string>
-    <string name="activity_qr_code__save">Save</string>
-    <string name="activity_qr_code__share">Share to</string>
-    <string name="activity_qr_code__qr_hint">Balance transfer can easily by sharing your QR Code. Below is your personal code.</string>
-
-    <string name="transaction_type__top_up">Top Up</string>
-    <string name="transaction_type__transfer">Transfer</string>
-
-    <string name="fragment_transactions_history__operator">Operator :</string>
-    <string name="fragment_transactions_history__date">Date :</string>
-
-    <string name="fragment_transactions_history__all">All</string>
-
-    <string name="fragment_transactions_history__choose_operator">Choose Operator</string>
-    <string name="fragment_transactions_history__choose_label">Choose</string>
-
-    <string-array name="fragment_transactions_history__operators_list">
-        <item>All</item>
-        <item>MPT</item>
-        <item>MPT_Eload</item>
-        <item>Telenor</item>
-        <item>Ooredoo</item>
-        <item>MyTel</item>
-        <item>MecTel</item>
-    </string-array>
-
-    <string name="fragment_transactions_history__choose_date">Choose Date</string>
-    <string-array name="fragment_transactions_history__filter_date">
-        <item>All</item>
-        <item>Today</item>
-        <item>Custom Date</item>
-    </string-array>
-
-    <string name="fragment_transactions_history__type">Type :</string>
-
-    <string name="fragment_transactions_history__choose_type">Choose Type</string>
-    <string-array name="fragment_transactions_history__filter_transfer_type">
-        <item>All</item>
-        <item>Send</item>
-        <item>Receive</item>
-    </string-array>
-
-    <string name="view_pop_up_image_picker_dialog__choose_photo">Choose Photo</string>
-    <string name="view_pop_up_image_picker_dialog__take_photo">Take Photo</string>
-    <string name="view_pop_up_image_picker_dialog__from_gallery">From Gallery</string>
-    <string name="view_pop_up_image_picker_dialog__remove">Remove</string>
-    <string name="view_pop_up_image_picker_dialog__cancel">Cancel</string>
-
-    <string name="strings_validation_errors__require_login_id">Login Id is required.</string>
-    <string name="strings_validation_errors__invalid_login_id_format">Login Id accepts A–Z, 0–9, underscore and dot characters only.</string>
-    <string name="strings_validation_errors__invalid_login_id_length">Login Id must not be longer than 16 characters.</string>
-    <string name="strings_validation_errors__login_id_taken">Login Id has already been taken.</string>
-    <string name="strings_validation_errors__require_full_name">Full name is required.</string>
-    <string name="strings_validation_errors__invalid_full_name_format">Full Name accepts A–Z, 0–9, underscore and dot characters only.</string>
-    <string name="strings_validation_errors__invalid_full_name_length">Full Name must not be longer than 30 characters.</string>
-    <string name="strings_validation_errors__require_phone_number">Phone number is required.</string>
-    <string name="strings_validation_errors__require_password">Password is required.</string>
-    <string name="strings_validation_errors__invalid_password_length">Password must not be longer than 36 characters.</string>
-    <string name="strings_validation_errors__submit_without_photo">Please select photo before you submit for registration ?</string>
-    <string name="strings_validation_errors__require_verify_code">Verify code is required.</string>
-    <string name="strings_validation_errors__invalid_verify_code_length">Verify code must be 6 digits.</string>
-    <string name="strings_validation_errors__require_balance">Balance is required.</string>
-    <string name="strings_validation_errors__require_region">Region is required.</string>
-    <string name="strings_validation_errors__require_security_questions">Security question is required.</string>
-
-    <string name="MESSAGE_LOCAL__INTERNET_CONNECTION_ERROR">No internet connection.</string>
-    <string name="MESSAGE_LOCAL__GENERIC_EXCEPTION">Something went wrong. Please try again.</string>
-
+    <string name="version">Version</string>
+    <string name="github">Github</string>
+    <string name="libraries">Libraries</string>
+    <string name="report_bugs">Report Bugs</string>
+    <string name="rate_app">Rate on Google Play</string>
+    <string name="txt_info">Installing English-Myanmar definition data.\nThis is just once time.\nPlease wait…</string>
+    <string name="app_update_label">We became better</string>
+    <string name="app_update_description">Please update new version…</string>
+    <string name="update">Update</string>
 </resources>

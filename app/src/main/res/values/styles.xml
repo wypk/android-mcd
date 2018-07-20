@@ -1,3 +1,16 @@
+<!--
+  ~ Copyright (C) 2018
+  ~  Source code is created by Elissa Software
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and limitations under the License.
+  -->
+
 <resources>
 
     <!-- Base application theme. -->
@@ -8,24 +21,12 @@
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowContentOverlay">@null</item>
-        <item name="colorControlNormal">#0093e7</item>
-        <item name="colorControlActivated">@color/colorPrimary</item>
-        <item name="colorControlHighlight">@color/colorPrimaryLight</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/blue_grey_100</item>
+        <item name="colorControlHighlight">@color/blue_grey_100</item>
         <item name="cardViewStyle">@style/CardView.Light</item>
-        <item name="android:fontFamily">@font/zawgyi</item>
-    </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-    <style name="SwitchThemeDefault" parent="Theme.AppCompat.Light">
-        <!-- active thumb & track color (30% transparency) -->
-        <item name="colorControlActivated">@color/colorPrimary</item>
-        <!-- inactive thumb color -->
-        <item name="colorSwitchThumbNormal">@color/colorPrimary</item>
-        <!-- inactive track color (30% transparency) -->
-        <item name="android:colorForeground">@color/colorPrimaryLight</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
+        <item name="android:fontFamily">@font/quicksand_medium</item>
     </style>
 
 </resources>

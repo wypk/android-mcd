@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2018
+  ~  Source code is created by Elissa Software
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and limitations under the License.
+  -->
+
+<!--  res/drawable/edittext_rounded_corners.xml -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="#455a64"
+    tools:targetApi="lollipop">
+
+    <item
+        android:state_focused="true"
+        android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#455a64" />
+            <stroke
+                android:width="0dp"
+                android:color="#455a64" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+
+    <item
+        android:state_focused="false"
+        android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#455a64" />
+            <stroke
+                android:width="0dp"
+                android:color="#455a64" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+
+    <item
+        android:state_focused="true"
+        android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#263238" />
+            <stroke
+                android:width="0dp"
+                android:color="#263238" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+
+    <item
+        android:state_focused="false"
+        android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:centerColor="#263238"
+                android:endColor="#263238"
+                android:startColor="#263238" />
+            <stroke
+                android:width="0dp"
+                android:color="#263238" />
+            <corners android:radius="0dp" />
+        </shape>
+    </item>
+
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="0dp"
+                android:left="0dp"
+                android:right="0dp"
+                android:top="0dp" />
+        </shape>
+    </item>
+
+</ripple>
