@@ -23,7 +23,6 @@ import com.crashlytics.android.Crashlytics;
 import com.crashlytics.android.answers.Answers;
 
 import io.fabric.sdk.android.Fabric;
-import wyp.mcd.component.android.AppLifecycle;
 import wyp.mcd.component.android.McdNotificationManager;
 import wyp.mcd.component.sharedpreferences.AppInfoStorage;
 import wyp.mcd.component.util.Logger;
@@ -45,9 +44,6 @@ public class McdApplication extends Application {
         Fabric.with(this, new Crashlytics());
         Fabric.with(this, new Answers());
         instance = this;
-
-        /* Register our AppLifecycle detector */
-        this.registerActivityLifecycleCallbacks(new AppLifecycle());
 
         /* SharedPreferences init */
         Logger.d(McdApplication.class, "Storage init...");

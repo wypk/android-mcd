@@ -70,8 +70,7 @@ public class SearchFragment extends BasicFragment implements LanguageOptionsPopu
         recyclerViewSearch.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         /* Add ItemDecoration */
-        recyclerViewSearch.addItemDecoration(
-                new RecyclerViewDividerItemDecoration(getActivity(), R.drawable.view_divider));
+        recyclerViewSearch.addItemDecoration(new RecyclerViewDividerItemDecoration(getActivity(), R.drawable.view_divider));
 
         /* Instantiate view model */
         searchViewModel = ViewModelProviders.of(this).get(SearchViewModel.class);
@@ -84,7 +83,6 @@ public class SearchFragment extends BasicFragment implements LanguageOptionsPopu
 
     @Override
     public void refresh() {
-
     }
 
     @OnClick(R.id.btnOptions)
@@ -109,7 +107,7 @@ public class SearchFragment extends BasicFragment implements LanguageOptionsPopu
             btnOptions.setVisibility(View.GONE);
             btnClear.setVisibility(View.VISIBLE);
             recyclerViewSearch.setVisibility(View.VISIBLE);
-            /* Set Data to adapter */
+            /* Search from db and set result to adapter */
             loadData(searchWord.trim() + "%");
         } else {
             btnOptions.setVisibility(View.VISIBLE);

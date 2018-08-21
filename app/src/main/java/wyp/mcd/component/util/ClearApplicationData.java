@@ -26,7 +26,7 @@ public class ClearApplicationData {
             String[] fileNames = applicationDirectory.list();
             for (String fileName : fileNames) {
                 if (!fileName.equals("lib")) {
-                    deleteFile(new File(applicationDirectory, fileName));
+                    ClearApplicationData.deleteFile(new File(applicationDirectory, fileName));
                 }
             }
         }
@@ -38,7 +38,7 @@ public class ClearApplicationData {
             if (file.isDirectory()) {
                 String[] children = file.list();
                 for (String aChildren : children) {
-                    deletedAll = deleteFile(new File(file, aChildren)) && deletedAll;
+                    deletedAll = ClearApplicationData.deleteFile(new File(file, aChildren)) && deletedAll;
                 }
             } else {
                 deletedAll = file.delete();

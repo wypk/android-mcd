@@ -46,7 +46,7 @@
     <string name="libraries">Libraries</string>
     <string name="report_bugs">Report Bugs</string>
     <string name="rate_app">Rate on Google Play</string>
-    <string name="txt_info">Installing English-Myanmar definition data.\nThis is just once time.\nPlease wait…</string>
+    <string name="txt_info">Installing definition data.\nThis is just once time.\nPlease wait…</string>
     <string name="app_update_label">We became better</string>
     <string name="app_update_description">Please update new version…</string>
     <string name="update">Update</string>

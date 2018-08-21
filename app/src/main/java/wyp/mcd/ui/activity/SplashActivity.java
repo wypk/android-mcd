@@ -45,17 +45,16 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void showNextScreen() {
+
         if (AppInfoStorage.getInstance().getVersionCode() == AndroidUtil.getCurrentVersionCode(this)) {
 
             Logger.log("Current version code :" + AndroidUtil.getCurrentVersionCode(this));
             Logger.log("AppInfoStorage version code :" + AppInfoStorage.getInstance().getVersionCode());
 
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(this, MainActivity.class));
             finish();
         } else {
-            Intent intent = new Intent(this, ParseAndPersistActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(this, ParseAndPersistActivity.class));
             finish();
         }
     }

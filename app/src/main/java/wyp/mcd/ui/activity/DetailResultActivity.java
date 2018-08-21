@@ -106,11 +106,6 @@ public class DetailResultActivity extends BasicActivity implements TextToSpeech.
     }
 
     @Override
-    public int getRootLayoutId() {
-        return R.layout.activity_detail_result;
-    }
-
-    @Override
     public String getScreenTitleAtStart() {
         return null;
     }

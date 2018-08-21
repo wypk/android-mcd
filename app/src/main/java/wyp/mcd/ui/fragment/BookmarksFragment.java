@@ -157,18 +157,17 @@ public class BookmarksFragment extends BasicFragment implements View.OnLongClick
     @Override
     public boolean onLongClick(View view) {
 
-        BookmarksEntity bookmarksEntity = (BookmarksEntity) view.getTag();
-
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
-        alertDialog.setCancelable(false);
-        alertDialog.setTitle(Objects.requireNonNull(getActivity()).getResources().getString(R.string.confirm_delete_dialog_title));
-        alertDialog.setMessage(Objects.requireNonNull(getActivity()).getResources().getString(R.string.confirm_delete_dialog_message));
-        alertDialog.setPositiveButton(Objects.requireNonNull(getActivity()).getResources().getString(R.string.confirm_delete_dialog_positive_button), (dialog, which) -> {
-            bookmarksViewModel.deleteBookmark(bookmarksEntity);
-            dialog.dismiss();
-        });
-        alertDialog.setNegativeButton(Objects.requireNonNull(getActivity()).getResources().getString(R.string.confirm_delete_dialog_negative_button), (dialog, which) -> dialog.dismiss());
-        alertDialog.show();
+        new AlertDialog.Builder(Objects.requireNonNull(getActivity()))
+                .setCancelable(false)
+                .setTitle(getString(R.string.confirm_delete_dialog_title))
+                .setMessage(getString(R.string.confirm_delete_dialog_message))
+                .setPositiveButton(getString(R.string.confirm_delete_dialog_positive_button), (dialog, which) -> {
+                    /* Delete item */
+                    bookmarksViewModel.deleteBookmark((BookmarksEntity) view.getTag());
+                    dialog.dismiss();
+                })
+                .setNegativeButton(getString(R.string.confirm_delete_dialog_negative_button), (dialog, which) -> dialog.dismiss())
+                .show();
         return true;
     }
 }

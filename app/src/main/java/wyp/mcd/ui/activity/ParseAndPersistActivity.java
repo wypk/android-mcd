@@ -68,11 +68,6 @@ public class ParseAndPersistActivity extends BasicActivity {
     }
 
     @Override
-    protected int getRootLayoutId() {
-        return R.layout.activity_parse_and_persist;
-    }
-
-    @Override
     protected String getScreenTitleAtStart() {
         return null;
     }

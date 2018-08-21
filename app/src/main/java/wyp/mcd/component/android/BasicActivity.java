@@ -113,8 +113,6 @@ public abstract class BasicActivity extends AppCompatActivity implements Network
 
     protected abstract int getLayoutFileId();
 
-    protected abstract int getRootLayoutId();
-
     protected abstract String getScreenTitleAtStart();
 
     protected abstract Class<? extends BasicActivity> getDefaultBackScreenIfRoot();

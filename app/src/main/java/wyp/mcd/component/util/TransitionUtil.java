@@ -16,7 +16,6 @@ package wyp.mcd.component.util;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.annotation.AnimRes;
 
 import java.io.Serializable;
@@ -29,32 +28,16 @@ public class TransitionUtil {
     public static void showNextActivity(
             Activity activity,
             Class<? extends BasicActivity> activityClazz,
+            @AnimRes int incomingActivityAnim,
+            @AnimRes int outgoingActivityAnim,
             boolean killMe) {
 
-        TransitionUtil.showNextActivity(activity, activityClazz, null, killMe);
-    }
+        activity.startActivity(new Intent(activity, activityClazz));
 
-    private static void showNextActivity(
-            Activity activity,
-            Class<? extends BasicActivity> activityClazz,
-            Map<String, Object> data, boolean killMe) {
-
-        Intent intent = new Intent(activity, activityClazz);
-
-        if (data != null && !data.isEmpty()) {
-            for (String key : data.keySet()) {
-                if (data.get(key) instanceof Serializable) {
-                    intent.putExtra(key, (Serializable) data.get(key));
-                } else if (data.get(key) instanceof Parcelable) {
-                    intent.putExtra(key, (Parcelable) data.get(key));
-                }
-            }
-        }
-
-        activity.startActivity(intent);
         if (killMe) {
             activity.finish();
         }
+        activity.overridePendingTransition(incomingActivityAnim, outgoingActivityAnim);
     }
 
     public static void showNextActivityWithMap(

@@ -29,6 +29,12 @@ import wyp.mcd.ui.activity.AppUpdateActivity;
 public class ExamResultFirebaseMessaginService extends FirebaseMessagingService {
 
     @Override
+    public void onNewToken(String s) {
+        super.onNewToken(s);
+        Logger.log(String.format("NEW_TOKEN %s", s));
+    }
+
+    @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
 
@@ -37,7 +43,7 @@ public class ExamResultFirebaseMessaginService extends FirebaseMessagingService 
         }
         if (remoteMessage.getNotification() != null) {
             Logger.log("Message Notification Body: [" + remoteMessage.getNotification().getBody() + "]");
-            sendNotification(remoteMessage.getNotification().getBody());
+            this.sendNotification(remoteMessage.getNotification().getBody());
         }
     }
 

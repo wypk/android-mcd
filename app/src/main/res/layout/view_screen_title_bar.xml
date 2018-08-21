@@ -18,7 +18,7 @@
     app:cardBackgroundColor="@android:color/white"
     app:cardCornerRadius="1dp"
     app:cardElevation="1dp"
-    tools:style="@style/CardView.Light">
+    tools:style="@style/CardView">
 
     <RelativeLayout
         android:id="@+id/rlHeader"

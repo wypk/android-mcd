@@ -32,17 +32,12 @@ public class AppUpdateActivity extends BasicActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mLottieAnimationView.setAnimation(R.raw.boxing);
+        mLottieAnimationView.setAnimation(R.raw.update);
         mLottieAnimationView.playAnimation();
     }
 
     @Override
     protected int getLayoutFileId() {
-        return R.layout.activity_app_update;
-    }
-
-    @Override
-    protected int getRootLayoutId() {
         return R.layout.activity_app_update;
     }
 

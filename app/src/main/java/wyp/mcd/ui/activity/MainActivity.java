@@ -22,6 +22,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.google.firebase.iid.FirebaseInstanceId;
+
 import java.util.Objects;
 
 import wyp.mcd.R;
@@ -79,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
 
         /* Check Update */
         this.checkAppUpdate();
+
+        /* Firebase Token */
+        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(MainActivity.this, instanceIdResult -> {
+            String updatedToken = instanceIdResult.getToken();
+            Logger.log(String.format("Firebase Updated Token :%s", updatedToken));
+        });
     }
 
     /*
@@ -117,8 +125,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showAppUpdateActivityScreen() {
-        TransitionUtil.showNextActivityWithMap(MainActivity.this, AppUpdateActivity.class, null,
-                R.anim.entering_screen_sliding_up,
-                R.anim.exiting_screen_sliding_down, false);
+        TransitionUtil.showNextActivity(MainActivity.this, AppUpdateActivity.class, R.anim.entering_screen_sliding_up, R.anim.exiting_screen_sliding_down, false);
     }
 }

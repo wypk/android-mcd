@@ -20,9 +20,10 @@
         android:layout_height="wrap_content"
         android:autoSizeTextType="uniform"
         android:fontFamily="@font/zawgyi"
-        android:lineSpacingExtra="6sp"
         android:textAlignment="gravity"
         android:textSize="@dimen/text_size_huge"
+        android:lineSpacingExtra="4sp"
+        android:lineSpacingMultiplier="1.1"
         tools:targetApi="o" />
 
     <android.support.v7.widget.AppCompatTextView

@@ -60,7 +60,7 @@ public class AboutFragment extends BasicFragment {
     @Override
     public void createView() {
         lblScreenTitle.setText(Objects.requireNonNull(getActivity()).getResources().getString(R.string.title_about));
-        lblAppVersionName.setText(String.format("%s%s", getString(R.string.version), AndroidUtil.getCurrentVersionName(getActivity())));
+        lblAppVersionName.setText(String.format("%s %s", getString(R.string.version), AndroidUtil.getCurrentVersionName(getActivity())));
     }
 
     @Override
@@ -97,21 +97,12 @@ public class AboutFragment extends BasicFragment {
                 .setLibrary(new Library("Licenser",
                         "https://github.com/marcoscgdev/Licenser",
                         License.MIT))
-                .setLibrary(new Library("Calligraphy",
-                        "https://github.com/chrisjenx/Calligraphy",
-                        License.APACHE))
-                .setLibrary(new Library("AVLoadingIndicatorView",
-                        "https://github.com/81813780/AVLoadingIndicatorView",
-                        License.APACHE))
                 .setLibrary(new Library("Alerter",
                         "https://github.com/Tapadoo/Alerter",
                         License.MIT))
                 .setLibrary(new Library("Butterknife",
                         "https://github.com/JakeWharton/butterknife",
                         License.APACHE))
-                .setLibrary(new Library("Lombok",
-                        "https://projectlombok.org/setup/android",
-                        License.MIT))
                 .setLibrary(new Library("FinestWebView",
                         "https://github.com/TheFinestArtist/FinestWebView-Android",
                         License.MIT))
@@ -147,8 +138,7 @@ public class AboutFragment extends BasicFragment {
     }
 
     private void showOnWebView(String url) {
-        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        startActivity(webIntent);
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
     }
 }
 

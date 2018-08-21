@@ -14,6 +14,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/grey_100"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -24,8 +25,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/rlTitleBar"
-        android:background="@color/grey_100">
+        android:layout_below="@id/rlTitleBar">
 
         <com.l4digital.fastscroll.FastScrollRecyclerView
             android:id="@+id/recyclerViewBookMark"

@@ -34,7 +34,7 @@ android {
         release {
             keyAlias 'mcd-key'
             keyPassword 'password'
-            storeFile file('/Users/elissa/Downloads/Bitbucket/android-projects/mm_computer_dictionary_anroid/android_keystore.jks')
+            storeFile file('/Users/elissa/Downloads/me/bitbucket/android-projects/mcd/mcd_android/android_keystore.jks')
             storePassword 'password'
         }
     }
@@ -43,8 +43,8 @@ android {
         applicationId "wyp.mmcomputerdictionary"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 12
-        versionName "2.2"
+        versionCode 14
+        versionName "2.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }

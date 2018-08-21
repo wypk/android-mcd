@@ -46,7 +46,7 @@ public class JsonParser {
     public List<EngToMmEntity> parseEngToMmJson() {
         Gson gson = new Gson();
         try {
-            engToMmEntitiesList = gson.fromJson(new JsonReader(new InputStreamReader(mContext.getAssets().open(JSON_FILE_ENG_TO_MM))), engToMmList);
+            engToMmEntitiesList = gson.fromJson(new JsonReader(new InputStreamReader(mContext.getAssets().open(JsonParser.JSON_FILE_ENG_TO_MM))), JsonParser.engToMmList);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -57,7 +57,7 @@ public class JsonParser {
     public List<EngToEngEntity> parseEngToEngJson() {
         Gson gson = new Gson();
         try {
-            engToEngEntitiesList = gson.fromJson(new JsonReader(new InputStreamReader(mContext.getAssets().open(JSON_FILE_ENG_TO_ENG))), engToEngList);
+            engToEngEntitiesList = gson.fromJson(new JsonReader(new InputStreamReader(mContext.getAssets().open(JsonParser.JSON_FILE_ENG_TO_ENG))), JsonParser.engToEngList);
 
         } catch (IOException e) {
             e.printStackTrace();

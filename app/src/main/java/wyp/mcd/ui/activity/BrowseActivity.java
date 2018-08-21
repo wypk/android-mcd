@@ -77,11 +77,6 @@ public class BrowseActivity extends BasicActivity {
     }
 
     @Override
-    public int getRootLayoutId() {
-        return R.layout.activity_browse;
-    }
-
-    @Override
     public String getScreenTitleAtStart() {
         return getString(R.string.title_browse);
     }
@@ -99,12 +94,12 @@ public class BrowseActivity extends BasicActivity {
     @OnClick(R.id.toggleImageBtn)
     public void clickToggleBtnDictionaryType() {
         if (dictionaryTypeWatcher) {
-            toggleBtnDictionaryType.setImageResource(R.drawable.ic_united_kingdom);
+            toggleBtnDictionaryType.setImageResource(R.drawable.ic_myanmar);
             dictionaryTypeWatcher = false;
             this.dictionaryType = DictionaryType.ENG_TO_ENG;
             loadData();
         } else {
-            toggleBtnDictionaryType.setImageResource(R.drawable.ic_myanmar);
+            toggleBtnDictionaryType.setImageResource(R.drawable.ic_united_kingdom);
             dictionaryTypeWatcher = true;
             this.dictionaryType = DictionaryType.ENG_TO_MM;
             loadData();
@@ -131,7 +126,7 @@ public class BrowseActivity extends BasicActivity {
 
     private void setDefaultDictionaryType() {
         dictionaryType = DictionaryType.ENG_TO_MM;
-        toggleBtnDictionaryType.setImageResource(R.drawable.ic_myanmar);
+        toggleBtnDictionaryType.setImageResource(R.drawable.ic_united_kingdom);
         dictionaryTypeWatcher = true;
     }
 

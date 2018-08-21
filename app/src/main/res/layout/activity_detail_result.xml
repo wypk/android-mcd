@@ -47,7 +47,7 @@
                     android:layout_height="120dp"
                     android:layout_margin="4dp"
                     app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="1dp"
+                    app:cardCornerRadius="5dp"
                     app:cardElevation="2dp"
                     app:cardUseCompatPadding="true"
                     tools:targetApi="M">
@@ -117,13 +117,19 @@
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
 
-                <RelativeLayout
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvMeaning"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="8dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="5dp"
                     android:layout_below="@id/cvVocabulary"
-                    android:layout_margin="6dp"
                     android:background="@color/white"
-                    android:padding="8dp">
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true"
+                    tools:targetApi="M">
 
                     <wyp.mcd.ui.uicomponents.ExpandableTextView
                         android:id="@+id/lblMeaning"
@@ -132,12 +138,13 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
                         android:layout_marginTop="4dp"
+                        android:padding="8dp"
                         android:text="@string/app_name"
                         app:DrawableAndTextGravity="center"
                         app:contentTextColor="@color/colorPrimaryDark"
                         app:contentTextSize="6sp"
                         app:maxCollapsedLines="6" />
-                </RelativeLayout>
+                </android.support.v7.widget.CardView>
 
             </RelativeLayout>
 
