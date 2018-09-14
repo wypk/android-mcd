@@ -14,23 +14,24 @@
 package wyp.mcd.component.util;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
 import org.jsoup.Jsoup;
 
 public class GetVersionCodeFromPlayStoreUtil extends AsyncTask<Void, Void, String> {
 
     private AsyncResponse delegate;
+    private String appUrl;
 
-    public GetVersionCodeFromPlayStoreUtil(AsyncResponse delegate) {
+    public GetVersionCodeFromPlayStoreUtil(AsyncResponse delegate, String appUrl) {
         this.delegate = delegate;
+        this.appUrl = appUrl;
     }
 
     @Override
     protected String doInBackground(Void... voids) {
         String newVersion;
         try {
-            newVersion = Jsoup.connect("https://play.google.com/store/apps/details?id=wyp.mmcomputerdictionary")
+            newVersion = Jsoup.connect(appUrl)
                     .timeout(30000)
                     .userAgent("Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6")
                     .referrer("http://www.google.com")
@@ -40,7 +41,7 @@ public class GetVersionCodeFromPlayStoreUtil extends AsyncTask<Void, Void, Strin
                     .ownText();
             return newVersion;
         } catch (Exception e) {
-            Log.e("Exception", e.getMessage());
+            Logger.d(this.getClass(), e.getMessage());
             return null;
         }
     }

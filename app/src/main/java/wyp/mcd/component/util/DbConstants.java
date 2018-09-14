@@ -13,7 +13,7 @@
 
 package wyp.mcd.component.util;
 
-public final class Constants {
+public final class DbConstants {
 
     public static final String DB_NAME = "mcd.db";
     public static final String TABLE_NAME_BOOKMARKS = "bookmarks";

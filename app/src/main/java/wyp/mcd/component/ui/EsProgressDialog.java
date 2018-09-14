@@ -11,15 +11,15 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
-package wyp.mcd.ui.uicomponents;
+package wyp.mcd.component.ui;
 
+import android.animation.ValueAnimator;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
-import android.view.View;
 import android.view.Window;
 
-import java.util.Objects;
+import com.airbnb.lottie.LottieAnimationView;
 
 import wyp.mcd.R;
 
@@ -31,9 +31,9 @@ public class EsProgressDialog {
     private EsProgressDialog() {
     }
 
-    public static synchronized EsProgressDialog getInstance() {
+    public static EsProgressDialog getInstance() {
 
-        if (null == esProgressDialog) {
+        if (esProgressDialog == null) {
             esProgressDialog = new EsProgressDialog();
         }
         return esProgressDialog;
@@ -44,10 +44,13 @@ public class EsProgressDialog {
         mDialog = new Dialog(mContext);
         mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         mDialog.setContentView(R.layout.view_progress_dialog);
-        mDialog.findViewById(R.id.progress_bar).setVisibility(View.VISIBLE);
-        Objects.requireNonNull(mDialog
-                .getWindow())
-                .setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+
+        LottieAnimationView lottieAnimationView = mDialog.findViewById(R.id.progressAnimation);
+        ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f);
+        animator.addUpdateListener(animation -> lottieAnimationView.setProgress((Float) animation.getAnimatedValue()));
+        animator.start();
+
+        mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         mDialog.setCancelable(true);
         mDialog.setCanceledOnTouchOutside(false);
         mDialog.show();

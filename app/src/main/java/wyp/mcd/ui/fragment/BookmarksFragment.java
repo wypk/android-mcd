@@ -30,7 +30,7 @@ import java.util.Objects;
 import butterknife.BindView;
 import butterknife.OnClick;
 import wyp.mcd.R;
-import wyp.mcd.component.android.BasicFragment;
+import wyp.mcd.component.ui.BasicFragment;
 import wyp.mcd.component.util.Logger;
 import wyp.mcd.infrastructure.entities.BookmarksEntity;
 import wyp.mcd.infrastructure.entities.EngToEngEntity;
@@ -39,7 +39,7 @@ import wyp.mcd.infrastructure.repository.EngToEngRepository;
 import wyp.mcd.infrastructure.repository.EngToMmRepository;
 import wyp.mcd.ui.activity.DetailResultActivity;
 import wyp.mcd.ui.adapter.BookmarksListAdapter;
-import wyp.mcd.ui.uicomponents.RecyclerViewDividerItemDecoration;
+import wyp.mcd.component.ui.RecyclerViewDividerItemDecoration;
 import wyp.mcd.viewmodel.BookmarksViewModel;
 
 public class BookmarksFragment extends BasicFragment implements View.OnLongClickListener, View.OnClickListener {

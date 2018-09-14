@@ -312,7 +312,6 @@
                         android:textSize="@dimen/text_size_regular" />
 
                 </RelativeLayout>
-
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>

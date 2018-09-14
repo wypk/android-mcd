@@ -24,7 +24,7 @@ import android.arch.persistence.room.Update;
 import java.util.List;
 
 import wyp.mcd.component.persistence.DateRoomConverter;
-import wyp.mcd.component.util.Constants;
+import wyp.mcd.component.util.DbConstants;
 import wyp.mcd.infrastructure.entities.BookmarksEntity;
 
 import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
@@ -33,7 +33,7 @@ import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 @TypeConverters(DateRoomConverter.class)
 public interface BookmarksDao {
 
-    @Query(value = "SELECT * FROM " + Constants.TABLE_NAME_BOOKMARKS)
+    @Query(value = "SELECT * FROM " + DbConstants.TABLE_NAME_BOOKMARKS)
     LiveData<List<BookmarksEntity>> getAllBookmarks();
 
     @Insert(onConflict = REPLACE)
@@ -45,7 +45,7 @@ public interface BookmarksDao {
     @Delete
     void deleteBookmark(BookmarksEntity bookmarksEntity);
 
-    @Query("DELETE FROM " + Constants.TABLE_NAME_BOOKMARKS)
+    @Query("DELETE FROM " + DbConstants.TABLE_NAME_BOOKMARKS)
     void deleteAllBookmarks();
 
     @Query("SELECT COUNT(bookmark_word) FROM bookmarks WHERE bookmark_word = :bookmarkWord")

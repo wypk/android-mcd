@@ -25,11 +25,11 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.OnClick;
 import wyp.mcd.R;
-import wyp.mcd.component.android.BasicActivity;
+import wyp.mcd.component.ui.BasicActivity;
 import wyp.mcd.component.type.DictionaryType;
 import wyp.mcd.ui.adapter.SearchEngListAdapter;
 import wyp.mcd.ui.adapter.SearchMmListAdapter;
-import wyp.mcd.ui.uicomponents.RecyclerViewDividerItemDecoration;
+import wyp.mcd.component.ui.RecyclerViewDividerItemDecoration;
 import wyp.mcd.viewmodel.BrowseListViewModel;
 
 public class BrowseActivity extends BasicActivity {

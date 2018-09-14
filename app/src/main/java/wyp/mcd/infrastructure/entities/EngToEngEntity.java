@@ -17,9 +17,9 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 
 import wyp.mcd.component.persistence.RoomEntity;
-import wyp.mcd.component.util.Constants;
+import wyp.mcd.component.util.DbConstants;
 
-@Entity(tableName = Constants.TABLE_NAME_ENG_TO_ENG)
+@Entity(tableName = DbConstants.TABLE_NAME_ENG_TO_ENG)
 public class EngToEngEntity extends RoomEntity {
 
     @ColumnInfo(name = "vocabulary", index = true)

@@ -21,7 +21,7 @@ import android.support.annotation.AnimRes;
 import java.io.Serializable;
 import java.util.Map;
 
-import wyp.mcd.component.android.BasicActivity;
+import wyp.mcd.component.ui.BasicActivity;
 
 public class TransitionUtil {
 

@@ -80,7 +80,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/ripple_borderless_action_button_gray"
+                android:background="@drawable/bg_ripple_borderless_action_btn_gray"
                 android:fontFamily="@font/quicksand_medium"
                 android:onClick="goToGooglePlayStore"
                 android:paddingEnd="42dp"

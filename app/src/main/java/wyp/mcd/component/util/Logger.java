@@ -13,7 +13,6 @@
 
 package wyp.mcd.component.util;
 
-
 import android.util.Log;
 
 import java.util.Date;

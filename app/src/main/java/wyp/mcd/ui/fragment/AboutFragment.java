@@ -28,7 +28,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import wyp.mcd.R;
 import wyp.mcd.component.android.AndroidUtil;
-import wyp.mcd.component.android.BasicFragment;
+import wyp.mcd.component.ui.BasicFragment;
 import wyp.mcd.ui.activity.BrowseActivity;
 
 public class AboutFragment extends BasicFragment {

@@ -32,16 +32,16 @@ import java.util.Locale;
 import butterknife.BindView;
 import butterknife.OnClick;
 import wyp.mcd.R;
-import wyp.mcd.component.android.BasicActivity;
+import wyp.mcd.component.ui.BasicActivity;
 import wyp.mcd.component.util.Logger;
 import wyp.mcd.component.util.Rabbit;
 import wyp.mcd.component.util.SystemFontChecker;
 import wyp.mcd.infrastructure.entities.BookmarksEntity;
-import wyp.mcd.ui.uicomponents.Alerter;
-import wyp.mcd.ui.uicomponents.ExpandableTextView;
-import wyp.mcd.ui.uicomponents.FinestWebViewComponent;
-import wyp.mcd.ui.uicomponents.PopupMenu;
-import wyp.mcd.ui.uicomponents.ToastView;
+import wyp.mcd.component.ui.Alerter;
+import wyp.mcd.component.ui.ExpandableTextView;
+import wyp.mcd.component.ui.FinestWebViewComponent;
+import wyp.mcd.component.ui.PopupMenu;
+import wyp.mcd.component.ui.ToastView;
 import wyp.mcd.viewmodel.BookmarksViewModel;
 
 @SuppressWarnings("deprecation")

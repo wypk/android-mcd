@@ -15,16 +15,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@android:color/transparent"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_shape_dialog"
     android:orientation="vertical">
 
-    <com.wang.avi.AVLoadingIndicatorView
-        android:id="@+id/progress_bar"
-        style="@style/AVLoadingIndicatorView"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:visibility="visible"
-        app:indicatorColor="@android:color/black"
-        app:indicatorName="BallClipRotatePulseIndicator" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progressAnimation"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/hex_loader" />
 
 </RelativeLayout>

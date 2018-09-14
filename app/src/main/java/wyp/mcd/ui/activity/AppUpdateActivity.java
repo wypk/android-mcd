@@ -21,7 +21,7 @@ import com.airbnb.lottie.LottieAnimationView;
 import butterknife.BindView;
 import wyp.mcd.R;
 import wyp.mcd.component.android.AndroidUtil;
-import wyp.mcd.component.android.BasicActivity;
+import wyp.mcd.component.ui.BasicActivity;
 
 public class AppUpdateActivity extends BasicActivity {
 

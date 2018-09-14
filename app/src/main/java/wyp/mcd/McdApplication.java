@@ -64,7 +64,6 @@ public class McdApplication extends Application {
         }
     }
 
-    /* override the base context of application to update default locale for the application */
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);

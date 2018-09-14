@@ -17,9 +17,9 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 
 import wyp.mcd.component.persistence.RoomEntity;
-import wyp.mcd.component.util.Constants;
+import wyp.mcd.component.util.DbConstants;
 
-@Entity(tableName = Constants.TABLE_NAME_BOOKMARKS)
+@Entity(tableName = DbConstants.TABLE_NAME_BOOKMARKS)
 public class BookmarksEntity extends RoomEntity {
 
     @ColumnInfo(name = "bookmark_word", index = true)

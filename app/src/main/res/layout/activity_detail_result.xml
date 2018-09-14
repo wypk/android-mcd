@@ -118,7 +118,6 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/cvMeaning"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -131,7 +130,7 @@
                     app:cardUseCompatPadding="true"
                     tools:targetApi="M">
 
-                    <wyp.mcd.ui.uicomponents.ExpandableTextView
+                    <wyp.mcd.component.ui.ExpandableTextView
                         android:id="@+id/lblMeaning"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

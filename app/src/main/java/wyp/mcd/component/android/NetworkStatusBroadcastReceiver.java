@@ -11,15 +11,13 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
-package wyp.mcd.component.network;
+package wyp.mcd.component.android;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
-
-import wyp.mcd.component.android.AndroidUtil;
 
 public class NetworkStatusBroadcastReceiver extends BroadcastReceiver {
 

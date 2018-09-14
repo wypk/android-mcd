@@ -10,7 +10,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and limitations under the License.
  */
-package wyp.mcd.component.android;
+package wyp.mcd.component.ui;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -22,9 +22,8 @@ import android.view.WindowManager;
 
 import butterknife.ButterKnife;
 import wyp.mcd.R;
-import wyp.mcd.component.network.NetworkStatusBroadcastReceiver;
+import wyp.mcd.component.android.NetworkStatusBroadcastReceiver;
 import wyp.mcd.component.util.TransitionUtil;
-import wyp.mcd.ui.uicomponents.EsProgressDialog;
 
 public abstract class BasicActivity extends AppCompatActivity implements NetworkStatusBroadcastReceiver.NetworkStatusListener {
 

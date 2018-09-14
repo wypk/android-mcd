@@ -22,7 +22,7 @@ import android.arch.persistence.room.TypeConverters;
 import java.util.List;
 
 import wyp.mcd.component.persistence.DateRoomConverter;
-import wyp.mcd.component.util.Constants;
+import wyp.mcd.component.util.DbConstants;
 import wyp.mcd.infrastructure.entities.EngToEngEntity;
 
 import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
@@ -40,7 +40,7 @@ public interface EngToEngDao {
     @Query("SELECT COUNT(id) FROM eng_to_eng")
     int getCount();
 
-    @Query("SELECT * FROM " + Constants.TABLE_NAME_ENG_TO_ENG)
+    @Query("SELECT * FROM " + DbConstants.TABLE_NAME_ENG_TO_ENG)
     LiveData<List<EngToEngEntity>> getAll();
 
     @Query("SELECT * FROM eng_to_eng WHERE vocabulary = :vocabulary")

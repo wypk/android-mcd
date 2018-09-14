@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                     this.showAppUpdateActivityScreen();
                 }
             }
-        }).execute();
+        }, "https://play.google.com/store/apps/details?id=wyp.mmcomputerdictionary").execute();
     }
 
     private void showAppUpdateActivityScreen() {

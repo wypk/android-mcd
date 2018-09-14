@@ -27,12 +27,12 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import butterknife.OnTextChanged;
 import wyp.mcd.R;
-import wyp.mcd.component.android.BasicFragment;
+import wyp.mcd.component.ui.BasicFragment;
 import wyp.mcd.component.type.DictionaryType;
 import wyp.mcd.ui.adapter.SearchEngListAdapter;
 import wyp.mcd.ui.adapter.SearchMmListAdapter;
-import wyp.mcd.ui.uicomponents.LanguageOptionsPopupMenu;
-import wyp.mcd.ui.uicomponents.RecyclerViewDividerItemDecoration;
+import wyp.mcd.component.ui.LanguageOptionsPopupMenu;
+import wyp.mcd.component.ui.RecyclerViewDividerItemDecoration;
 import wyp.mcd.viewmodel.SearchViewModel;
 
 public class SearchFragment extends BasicFragment implements LanguageOptionsPopupMenu.LanguageOptionsPopupMenuListener {

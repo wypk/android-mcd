@@ -10,7 +10,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and limitations under the License.
  */
-package wyp.mcd.component.android;
+package wyp.mcd.component.ui;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -24,7 +24,7 @@ import butterknife.ButterKnife;
 
 public abstract class BasicFragment extends Fragment {
 
-    private View fragmentView = null;
+    private View fragmentView;
 
     @Nullable
     @Override

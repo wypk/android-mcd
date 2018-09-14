@@ -16,7 +16,6 @@ package wyp.mcd.component.persistence;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
-
 @Entity
 public abstract class RoomEntity {
 

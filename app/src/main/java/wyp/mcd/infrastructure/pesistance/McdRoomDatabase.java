@@ -20,7 +20,7 @@ import android.arch.persistence.room.TypeConverters;
 import android.content.Context;
 
 import wyp.mcd.component.persistence.DateRoomConverter;
-import wyp.mcd.component.util.Constants;
+import wyp.mcd.component.util.DbConstants;
 import wyp.mcd.infrastructure.dao.BookmarksDao;
 import wyp.mcd.infrastructure.dao.EngToEngDao;
 import wyp.mcd.infrastructure.dao.EngToMmDao;
@@ -51,7 +51,7 @@ public abstract class McdRoomDatabase extends RoomDatabase {
 
         return Room.databaseBuilder(mContext.getApplicationContext(),
                 McdRoomDatabase.class,
-                Constants.DB_NAME)
+                DbConstants.DB_NAME)
                 .allowMainThreadQueries()
                 .fallbackToDestructiveMigration()
                 .build();
