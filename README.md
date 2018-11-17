@@ -15,5 +15,5 @@ Google PlayStore => https://play.google.com/store/apps/details?id=wyp.mcd
 </p>
 <p>
   <img src="https://github.com/wyphyoe/mcd-android/blob/master/assets/view7.png" width="250">...
-  <img src="https://github.com/wyphyoe/mcd-android/blob/master/assets/view8.png" width="250"><\t>
+  <img src="https://github.com/wyphyoe/mcd-android/blob/master/assets/view8.png" width="250">
 </p>
