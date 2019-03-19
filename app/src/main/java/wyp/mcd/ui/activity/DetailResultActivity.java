@@ -1,29 +1,34 @@
 /*
- * Copyright (C) 2018
- *  Source code is created by Elissa Software
- *
+ * Copyright 2019 Wai Yan (TechBase Software). All rights reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+ * You may obtain a copy of the License at
+ * http://www.apache.org/licenses/LICENSE-2.0
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and limitations under the License.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 package wyp.mcd.ui.activity;
 
 import android.annotation.SuppressLint;
-import android.arch.lifecycle.ViewModelProviders;
+
+import androidx.lifecycle.ViewModelProviders;
+
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.widget.AppCompatImageButton;
-import android.support.v7.widget.AppCompatTextView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.appcompat.widget.AppCompatImageButton;
+import androidx.appcompat.widget.AppCompatTextView;
+
 import android.view.View;
 import android.widget.ScrollView;
 
@@ -36,16 +41,17 @@ import wyp.mcd.component.ui.BasicActivity;
 import wyp.mcd.component.util.Logger;
 import wyp.mcd.component.util.Rabbit;
 import wyp.mcd.component.util.SystemFontChecker;
+import wyp.mcd.component.util.WebViewUtil;
 import wyp.mcd.infrastructure.entities.BookmarksEntity;
 import wyp.mcd.component.ui.Alerter;
 import wyp.mcd.component.ui.ExpandableTextView;
-import wyp.mcd.component.ui.FinestWebViewComponent;
 import wyp.mcd.component.ui.PopupMenu;
 import wyp.mcd.component.ui.ToastView;
 import wyp.mcd.viewmodel.BookmarksViewModel;
 
 @SuppressWarnings("deprecation")
-public class DetailResultActivity extends BasicActivity implements TextToSpeech.OnInitListener, PopupMenu.PopupMenuListener {
+public class DetailResultActivity extends BasicActivity
+        implements TextToSpeech.OnInitListener, PopupMenu.PopupMenuListener {
 
     private static final String APP_LINK = "\nhttps://goo.gl/NPRPgx";
 
@@ -139,7 +145,7 @@ public class DetailResultActivity extends BasicActivity implements TextToSpeech.
     @OnClick(R.id.fabGoogleTranslate)
     public void goGoogleTranslate() {
         if (internetAvailableWatcher) {
-            translateInGoogleTranslate(vocabulary);
+            this.translateInGoogleTranslate(vocabulary);
         } else {
             noInternetConnectionAlerter();
         }
@@ -147,7 +153,7 @@ public class DetailResultActivity extends BasicActivity implements TextToSpeech.
     }
 
     private void translateInGoogleTranslate(String translate) {
-        FinestWebViewComponent.showWithFinestWebView(this, translate, "https://translate.google.com/?source=gtx_m#en/my/" + translate);
+        WebViewUtil.show(this, "https://translate.google.com/?source=gtx_m#en/my/" + translate);
     }
 
     @OnClick(R.id.btnPronunciation)
@@ -157,7 +163,8 @@ public class DetailResultActivity extends BasicActivity implements TextToSpeech.
 
     public void copyContent(View view) {
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-        ClipData clip = ClipData.newPlainText("Computer Dictionary", vocabulary + "\n\n" + meaning + "\n" + APP_LINK);
+        ClipData clip = ClipData.newPlainText("Computer Dictionary",
+                vocabulary + "\n\n" + meaning + "\n" + APP_LINK);
         assert clipboard != null;
         Alerter.showAlerter(this, "Copied to clipboard.", R.color.green_700, R.drawable.ic_success);
         clipboard.setPrimaryClip(clip);
@@ -199,7 +206,8 @@ public class DetailResultActivity extends BasicActivity implements TextToSpeech.
     }
 
     private void noInternetConnectionAlerter() {
-        Alerter.showAlerter(this, "No internet connection.", R.color.red_A700, R.drawable.ic_no_internet);
+        Alerter.showAlerter(this, "No internet connection.", R.color.red_A700,
+                R.drawable.ic_no_internet);
     }
 
     /* Get The String from previous fragment */
@@ -231,7 +239,7 @@ public class DetailResultActivity extends BasicActivity implements TextToSpeech.
     @Override
     public void goToGoogleSearch() {
         if (internetAvailableWatcher) {
-            FinestWebViewComponent.showWithFinestWebView(this, vocabulary, "https://www.google.com.mm/search?q=" + vocabulary);
+            WebViewUtil.show(this, "https://www.google.com.mm/search?q=" + vocabulary);
         } else {
             noInternetConnectionAlerter();
         }
@@ -240,7 +248,7 @@ public class DetailResultActivity extends BasicActivity implements TextToSpeech.
     @Override
     public void goToWikipediaSearch() {
         if (internetAvailableWatcher) {
-            FinestWebViewComponent.showWithFinestWebView(this, vocabulary, "https://en.wikipedia.org/wiki/" + vocabulary);
+            WebViewUtil.show(this, "https://en.wikipedia.org/wiki/" + vocabulary);
         } else {
             noInternetConnectionAlerter();
         }

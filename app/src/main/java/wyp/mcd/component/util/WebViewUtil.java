@@ -11,8 +11,19 @@
  * limitations under the License.
  */
 
-package wyp.mcd.component.type;
+package wyp.mcd.component.util;
 
-public enum DictionaryType {
-    ENG_TO_MM, ENG_TO_ENG
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+
+/**
+ * Created by Wai Yan on 3/17/19.
+ */
+public class WebViewUtil {
+
+    public static void show(Context context, String url) {
+
+        context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+    }
 }
