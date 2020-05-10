@@ -1,6 +1,5 @@
 Landing Page -> https://wyphyoe.github.io/mcd</br>
-Google PlayStore -> https://goo.gl/NPRPgx
-
+Google PlayStore -> https://play.google.com/store/apps/details?id=wyp.mcd
 <p align="center">
 <table align="center">
        <tr>
